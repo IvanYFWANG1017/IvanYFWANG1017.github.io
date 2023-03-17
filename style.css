@@ -1,0 +1,40 @@
+/* 定义页面字体和背景颜色 */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* 定义标题样式 */
+h1 {
+    font-size: 28px;
+    color: #333;
+    margin: 20px 0;
+}
+
+/* 定义链接样式 */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* 定义按钮样式 */
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* 定义表格样式 */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
