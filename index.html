@@ -1,33 +1,129 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>网站标题</title>
-    <link rel="stylesheet" href="style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Music Education</title>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>网站标题</h1>
-        <nav>
-            <ul>
-                <li><a href="#">菜单1</a></li>
-                <li><a href="#">菜单2</a></li>
-                <li><a href="#">菜单3</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <h2>内容标题1</h2>
-            <p>这是内容1</p>
-        </section>
-        <section>
-            <h2>内容标题2</h2>
-            <p>这是内容2</p>
-        </section>
-    </main>
-    <footer>
-        <p>版权信息 © 2023</p>
-    </footer>
+
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+		<div class="container">
+			<a class="navbar-brand" href="#">Music Education</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarCollapse">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="#">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#about">About</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#courses">Courses</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#contact">Contact Us</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<header class="jumbotron">
+		<div class="container">
+			<h1 class="display-4">Learn Music Today!</h1>
+			<p class="lead">Join us to learn music from the best instructors in the industry.</p>
+			<a href="#courses" class="btn btn-primary btn-lg">View Courses</a>
+		</div>
+	</header>
+
+	<section id="about">
+		<div class="container">
+			<h2>About Us</h2>
+			<p>Music Education is a leading provider of online music education courses. Our mission is to provide high-quality music education to students of all ages and skill levels. We offer a wide range of courses taught by experienced instructors who are passionate about music and dedicated to helping students achieve their musical goals.</p>
+		</div>
+	</section>
+
+	<section id="courses">
+		<div class="container">
+			<h2>Our Courses</h2>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="card">
+						<div class="card-body">
+							<h5 class="card-title">Beginner Piano</h5>
+							<p class="card-text">Learn the basics of playing the piano with our beginner piano course. No prior experience necessary.</p>
+							<a href="#" class="btn btn-primary">Enroll Now</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card">
+						<div class="card-body">
+							<h5 class="card-title">Guitar for Beginners</h5>
+							<p class="card-text">Get started with playing the guitar with our beginner guitar course. Learn chords, strumming techniques, and more.</p>
+							<a href="#" class="btn btn-primary">Enroll Now</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="card">
+					<div class="card-body">
+						<h5 class="card-title">Vocal Training</h5>
+						<p class="card-text">Improve your singing skills with our vocal training course. Learn proper breathing, pitch control, and more.</p>
+						<a href="#" class="btn btn-primary">Enroll Now</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="contact">
+	<div class="container">
+		<h2>Contact Us</h2>
+		<form action="submit.php" method="POST">
+			<div class="form-group">
+				<label for="name">Name</label>
+				<input type="text" name="name" id="name" class="form-control" required>
+			</div>
+			<div class="form-group">
+				<label for="email">Email</label>
+				<input type="email" name="email" id="email" class="form-control" required>
+			</div>
+			<div class="form-group">
+				<label for="message">Message</label>
+				<textarea name="message" id="message" cols="30" rows="10" class="form-control" required></textarea>
+			</div>
+			<button type="submit" class="btn btn-primary">Send Message</button>
+		</form>
+	</div>
+</section>
+
+<footer class="bg-dark text-light">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<p>&copy; Music Education 2023</p>
+			</div>
+			<div class="col-md-6">
+				<ul class="list-inline">
+					<li class="list-inline-item"><a href="#">Terms of Use</a></li>
+					<li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<!-- Bootstrap JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </body>
-</html>
+</html>						
