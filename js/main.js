@@ -12,34 +12,26 @@ $(document).ready(function() {
 
 // Courses accordion
 
-// 获取元素
-const slider = document.querySelector(".slider");
-const slides = document.querySelectorAll(".slide");
-const prevBtn = document.querySelector(".prev-btn");
-const nextBtn = document.querySelector(".next-btn");
+let currentIndex = 0; // 当前显示产品的索引
+const products = document.querySelectorAll('.product'); // 获取所有产品元素
+const leftBtn = document.querySelector('.left-btn'); // 获取左切换按钮元素
+const rightBtn = document.querySelector('.right-btn'); // 获取右切换按钮元素
 
-// 计算slide的宽度和margin-right
-const slideWidth = slides[0].offsetWidth + parseInt(getComputedStyle(slides[0]).marginRight);
-
-// 设置slider的宽度
-slider.style.width = slideWidth * slides.length + "px";
-
-// 初始化当前slide的index
-let currentSlide = 0;
-
-// 点击prev按钮时，向左移动
-prevBtn.addEventListener("click", () => {
-  if (currentSlide > 0) {
-    currentSlide--;
-    slider.style.transform = `translateX(-${slideWidth * currentSlide}px)`;
+// 点击左切换按钮
+leftBtn.addEventListener('click', function() {
+  if (currentIndex > 0) { // 如果当前不是第一个产品，则将索引减1，并将当前产品隐藏，显示前一个产品
+    products[currentIndex].classList.remove('show');
+    currentIndex--;
+    products[currentIndex].classList.add('show');
   }
 });
 
-// 点击next按钮时，向右移动
-nextBtn.addEventListener("click", () => {
-  if (currentSlide < slides.length - 1) {
-    currentSlide++;
-    slider.style.transform = `translateX(-${slideWidth * currentSlide}px)`;
+// 点击右切换按钮
+rightBtn.addEventListener('click', function() {
+  if (currentIndex < products.length - 1) { // 如果当前不是最后一个产品，则将索引加1，并将当前产品隐藏，显示后一个产品
+    products[currentIndex].classList.remove('show');
+    currentIndex++;
+    products[currentIndex].classList.add('show');
   }
 });
 
