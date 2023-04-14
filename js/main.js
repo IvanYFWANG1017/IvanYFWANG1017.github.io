@@ -11,38 +11,30 @@ $(document).ready(function() {
 });
 
 // Courses accordion
+// Get product images and buttons
+var products = document.querySelectorAll('.product');
+var buttons = document.querySelectorAll('.button');
 
-$('.product-button').click(function() {
-$(document).ready(function() {
-  var currentIndex = 1;
-  var totalProducts = $('.product-container').children().length;
+// Set current product index to 0
+var currentProduct = 0;
 
-  // Move to the previous product
-  $('#button-left').click(function() {
-    currentIndex--;
-    if (currentIndex < 1) {
-      currentIndex = totalProducts;
-    }
-    updateActiveProduct();
+// Add click event listeners to buttons
+for (var i = 0; i < buttons.length; i++) {
+  buttons[i].addEventListener('click', function() {
+    // Remove active class from current button and product
+    buttons[currentProduct].classList.remove('active');
+    products[currentProduct].classList.remove('center');
+    products[currentProduct].classList.add('blur');
+    
+    // Update current product index
+    currentProduct = parseInt(this.getAttribute('data-product'));
+    
+    // Add active class to clicked button and center product
+    this.classList.add('active');
+    products[currentProduct].classList.add('center');
+    products[currentProduct].classList.remove('blur');
   });
-
-  // Move to the next product
-  $('#button-right').click(function() {
-    currentIndex++;
-    if (currentIndex > totalProducts) {
-      currentIndex = 1;
-    }
-    updateActiveProduct();
-  });
-
-  // Update the active product and its surrounding products
-  function updateActiveProduct() {
-    $('.product-container').children().removeClass('product-active');
-    $('.product-container').children().eq(currentIndex - 1).addClass('product-active');
-    $('.product-container').children().eq(currentIndex - 2).addClass('product-left');
-    $('.product-container').children().eq(currentIndex % totalProducts).addClass('product-right');
-  }
-});
+}
 
 
 
