@@ -54,15 +54,48 @@ nav a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 400px;
+  margin-top: 50px;
+  position: relative;
 }
 
-.product-image {
-  width: 80%;
-  max-width: 600px;
-  height: auto;
-  margin: 0 20px;
+.product-left, .product-right {
+  opacity: 0.5;
+  transform: scale(0.8);
+  transition: opacity 0.5s, transform 0.5s;
+  position: absolute;
+  top: 0;
 }
+
+.product-left {
+  left: 0;
+}
+
+.product-middle {
+  z-index: 1;
+}
+
+.product-right {
+  right: 0;
+}
+
+.product-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#button-left, #button-right {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
 
 
 /* Contact Section */
