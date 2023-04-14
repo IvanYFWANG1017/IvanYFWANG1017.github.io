@@ -50,30 +50,18 @@ nav a:hover {
 
 /* Courses Section */
 
-.container {
-  width: 80%;
-  margin: 0 auto;
-  position: relative;
-}
-
-.slider {
+.product-container {
   display: flex;
-  width: 100%;
-  overflow-x: hidden;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
 }
 
-.slide {
-  flex: 1;
-  margin-right: 20px;
-}
-
-.slide img {
-  width: 100%;
-}
-
-.slide h3 {
-  margin-top: 10px;
-  text-align: center;
+.product-image {
+  width: 80%;
+  max-width: 600px;
+  height: auto;
+  margin: 0 20px;
 }
 
 
