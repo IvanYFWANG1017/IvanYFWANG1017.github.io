@@ -50,36 +50,32 @@ nav a:hover {
 
 /* Courses Section */
 
-#courses {
-	background-color: #f7f7f7;
-	padding: 50px 0;
+.container {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
 }
 
-#courses h2 {
-	text-align: center;
-	margin-bottom: 2rem;
+.slider {
+  display: flex;
+  width: 100%;
+  overflow-x: hidden;
 }
 
-.card {
-	border: none;
-	box-shadow: 0 0.5rem 1rem rgba(0,0,0,.15);
+.slide {
+  flex: 1;
+  margin-right: 20px;
 }
 
-.card:hover {
-	transform: translateY(-5px);
-	transition: transform .2s ease-out;
+.slide img {
+  width: 100%;
 }
 
-.card-title {
-	font-weight: bold;
-	font-size: 1.5rem;
-	margin-bottom: 1rem;
+.slide h3 {
+  margin-top: 10px;
+  text-align: center;
 }
 
-.card-text {
-	font-size: 1.2rem;
-	margin-bottom: 1rem;
-}
 
 /* Contact Section */
 
