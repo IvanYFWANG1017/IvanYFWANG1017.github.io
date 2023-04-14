@@ -11,30 +11,52 @@ $(document).ready(function() {
 });
 
 // Courses accordion
-// Get product images and buttons
-var products = document.querySelectorAll('.product');
-var buttons = document.querySelectorAll('.button');
+// Gallery image click
 
-// Set current product index to 0
-var currentProduct = 0;
-
-// Add click event listeners to buttons
-for (var i = 0; i < buttons.length; i++) {
-  buttons[i].addEventListener('click', function() {
-    // Remove active class from current button and product
-    buttons[currentProduct].classList.remove('active');
-    products[currentProduct].classList.remove('center');
-    products[currentProduct].classList.add('blur');
-    
-    // Update current product index
-    currentProduct = parseInt(this.getAttribute('data-product'));
-    
-    // Add active class to clicked button and center product
-    this.classList.add('active');
-    products[currentProduct].classList.add('center');
-    products[currentProduct].classList.remove('blur');
+$('.gallery-item').click(function() {
+  var $this = $(this),
+      newTitle = $this.find('.gallery-title').text(),
+      newDesc = $this.data('desc'),
+      newSrc = $this.data('img'),
+      newPosition = $this.data('position');
+  
+  // Change product image and details
+  $('.product-img img').attr({
+    src: newSrc,
+    alt: newTitle
   });
-}
+  $('.product-title').text(newTitle);
+  $('.product-desc').text(newDesc);
+  
+  // Move gallery images
+  $('.gallery-item').removeClass('active');
+  $this.addClass('active');
+  
+  if (newPosition === 'left') {
+    $('.gallery-item').removeClass('center right left');
+    $('.gallery-item.active').prev().addClass('left');
+    $('.gallery-item.active').prev().prev().addClass('center');
+    $('.gallery-item.active').next().addClass('right');
+    $('.gallery-item.active').next().next().addClass('righter');
+  } else if (newPosition === 'right') {
+    $('.gallery-item').removeClass('center right left');
+    $('.gallery-item.active').next().addClass('right');
+    $('.gallery-item.active').prev().addClass('left');
+    $('.gallery-item.active').prev().prev().addClass('lefter');
+    $('.gallery-item.active').next().next().addClass('center');
+  } else {
+    $('.gallery-item').removeClass('center right left lefter righter');
+    $('.gallery-item.active').prev().prev().prev().addClass('left');
+    $('.gallery-item.active').prev().prev().addClass('lefter');
+    $('.gallery-item.active').next().next().next().addClass('right');
+    $('.gallery-item.active').next().next().addClass('righter');
+  }
+});
+
+// Footer year
+
+var year = new Date().getFullYear();
+$('#footer-year').text(year);
 
 
 
