@@ -12,10 +12,37 @@ $(document).ready(function() {
 
 // Courses accordion
 
-$('.card-header').click(function() {
-  $(this).next('.card-body').slideToggle(500);
-  $(this).find('.fa').toggleClass('fa-angle-down fa-angle-up');
+// 获取元素
+const slider = document.querySelector(".slider");
+const slides = document.querySelectorAll(".slide");
+const prevBtn = document.querySelector(".prev-btn");
+const nextBtn = document.querySelector(".next-btn");
+
+// 计算slide的宽度和margin-right
+const slideWidth = slides[0].offsetWidth + parseInt(getComputedStyle(slides[0]).marginRight);
+
+// 设置slider的宽度
+slider.style.width = slideWidth * slides.length + "px";
+
+// 初始化当前slide的index
+let currentSlide = 0;
+
+// 点击prev按钮时，向左移动
+prevBtn.addEventListener("click", () => {
+  if (currentSlide > 0) {
+    currentSlide--;
+    slider.style.transform = `translateX(-${slideWidth * currentSlide}px)`;
+  }
 });
+
+// 点击next按钮时，向右移动
+nextBtn.addEventListener("click", () => {
+  if (currentSlide < slides.length - 1) {
+    currentSlide++;
+    slider.style.transform = `translateX(-${slideWidth * currentSlide}px)`;
+  }
+});
+
 
 // Contact form submission
 
