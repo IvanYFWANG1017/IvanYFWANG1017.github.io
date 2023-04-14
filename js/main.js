@@ -13,36 +13,37 @@ $(document).ready(function() {
 // Courses accordion
 
 $('.product-button').click(function() {
-  var currentIndex = parseInt($('.active').attr('data-index'));
-  var nextIndex = (currentIndex + 1) % 3;
-  $('.active').removeClass('active');
-  $('[data-index="' + nextIndex + '"]').addClass('active');
-  $('.product-image').attr('src', 'product-' + nextIndex + '.png');
-});
+$(document).ready(function() {
+  var currentIndex = 1;
+  var totalProducts = $('.product-container').children().length;
 
-
-let currentIndex = 0; // 当前显示产品的索引
-const products = document.querySelectorAll('.product'); // 获取所有产品元素
-const leftBtn = document.querySelector('.left-btn'); // 获取左切换按钮元素
-const rightBtn = document.querySelector('.right-btn'); // 获取右切换按钮元素
-
-// 点击左切换按钮
-leftBtn.addEventListener('click', function() {
-  if (currentIndex > 0) { // 如果当前不是第一个产品，则将索引减1，并将当前产品隐藏，显示前一个产品
-    products[currentIndex].classList.remove('show');
+  // Move to the previous product
+  $('#button-left').click(function() {
     currentIndex--;
-    products[currentIndex].classList.add('show');
+    if (currentIndex < 1) {
+      currentIndex = totalProducts;
+    }
+    updateActiveProduct();
+  });
+
+  // Move to the next product
+  $('#button-right').click(function() {
+    currentIndex++;
+    if (currentIndex > totalProducts) {
+      currentIndex = 1;
+    }
+    updateActiveProduct();
+  });
+
+  // Update the active product and its surrounding products
+  function updateActiveProduct() {
+    $('.product-container').children().removeClass('product-active');
+    $('.product-container').children().eq(currentIndex - 1).addClass('product-active');
+    $('.product-container').children().eq(currentIndex - 2).addClass('product-left');
+    $('.product-container').children().eq(currentIndex % totalProducts).addClass('product-right');
   }
 });
 
-// 点击右切换按钮
-rightBtn.addEventListener('click', function() {
-  if (currentIndex < products.length - 1) { // 如果当前不是最后一个产品，则将索引加1，并将当前产品隐藏，显示后一个产品
-    products[currentIndex].classList.remove('show');
-    currentIndex++;
-    products[currentIndex].classList.add('show');
-  }
-});
 
 
 // Contact form submission
