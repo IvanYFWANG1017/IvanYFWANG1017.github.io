@@ -12,6 +12,15 @@ $(document).ready(function() {
 
 // Courses accordion
 
+$('.product-button').click(function() {
+  var currentIndex = parseInt($('.active').attr('data-index'));
+  var nextIndex = (currentIndex + 1) % 3;
+  $('.active').removeClass('active');
+  $('[data-index="' + nextIndex + '"]').addClass('active');
+  $('.product-image').attr('src', 'product-' + nextIndex + '.png');
+});
+
+
 let currentIndex = 0; // 当前显示产品的索引
 const products = document.querySelectorAll('.product'); // 获取所有产品元素
 const leftBtn = document.querySelector('.left-btn'); // 获取左切换按钮元素
