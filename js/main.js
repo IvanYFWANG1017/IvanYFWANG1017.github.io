@@ -11,52 +11,45 @@ $(document).ready(function() {
 });
 
 // Courses accordion
-// Gallery image click
 
-$('.gallery-item').click(function() {
-  var $this = $(this),
-      newTitle = $this.find('.gallery-title').text(),
-      newDesc = $this.data('desc'),
-      newSrc = $this.data('img'),
-      newPosition = $this.data('position');
-  
-  // Change product image and details
-  $('.product-img img').attr({
-    src: newSrc,
-    alt: newTitle
-  });
-  $('.product-title').text(newTitle);
-  $('.product-desc').text(newDesc);
-  
-  // Move gallery images
-  $('.gallery-item').removeClass('active');
-  $this.addClass('active');
-  
-  if (newPosition === 'left') {
-    $('.gallery-item').removeClass('center right left');
-    $('.gallery-item.active').prev().addClass('left');
-    $('.gallery-item.active').prev().prev().addClass('center');
-    $('.gallery-item.active').next().addClass('right');
-    $('.gallery-item.active').next().next().addClass('righter');
-  } else if (newPosition === 'right') {
-    $('.gallery-item').removeClass('center right left');
-    $('.gallery-item.active').next().addClass('right');
-    $('.gallery-item.active').prev().addClass('left');
-    $('.gallery-item.active').prev().prev().addClass('lefter');
-    $('.gallery-item.active').next().next().addClass('center');
-  } else {
-    $('.gallery-item').removeClass('center right left lefter righter');
-    $('.gallery-item.active').prev().prev().prev().addClass('left');
-    $('.gallery-item.active').prev().prev().addClass('lefter');
-    $('.gallery-item.active').next().next().next().addClass('right');
-    $('.gallery-item.active').next().next().addClass('righter');
-  }
+// Store the current active image index
+let currentImageIndex = 2;
+
+// Get the image container and all images
+const imageContainer = document.querySelector('.image-container');
+const images = imageContainer.querySelectorAll('img');
+
+// Get the left and right arrow buttons
+const leftArrow = document.querySelector('.arrow.left');
+const rightArrow = document.querySelector('.arrow.right');
+
+// Add event listeners to the arrow buttons
+leftArrow.addEventListener('click', () => {
+  currentImageIndex = currentImageIndex === 0 ? images.length - 1 : currentImageIndex - 1;
+  updateImages();
 });
 
-// Footer year
+rightArrow.addEventListener('click', () => {
+  currentImageIndex = currentImageIndex === images.length - 1 ? 0 : currentImageIndex + 1;
+  updateImages();
+});
 
-var year = new Date().getFullYear();
-$('#footer-year').text(year);
+// Update the images based on the current active index
+function updateImages() {
+  // Set the current active image class to inactive
+  images[currentImageIndex].classList.add('active');
+  images[currentImageIndex].classList.remove('inactive');
+
+  // Set the images on the left and right of the active image to be slightly smaller and faded out
+  let leftIndex = currentImageIndex === 0 ? images.length - 1 : currentImageIndex - 1;
+  let rightIndex = currentImageIndex === images.length - 1 ? 0 : currentImageIndex + 1;
+
+  images[leftIndex].classList.remove('active');
+  images[leftIndex].classList.add('inactive');
+
+  images[rightIndex].classList.remove('active');
+  images[rightIndex].classList.add('inactive');
+}
 
 
 
