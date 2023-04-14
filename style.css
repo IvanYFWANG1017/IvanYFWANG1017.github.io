@@ -90,6 +90,12 @@ nav a:hover {
   max-height: 100%;
 }
 
+.product-img {
+  max-width: 100%;
+  height: auto;
+}
+
+
 .prev,
 .next {
   position: absolute;
