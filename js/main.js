@@ -19,6 +19,7 @@ const buttons = document.querySelectorAll('.button');
 // Add event listener to each button
 buttons.forEach((button, index) => {
   button.addEventListener('click', () => {
+    console.log('Button clicked');
     // Remove active class from all buttons
     buttons.forEach(button => button.classList.remove('active'));
     // Add active class to clicked button
