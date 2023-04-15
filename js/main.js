@@ -13,8 +13,8 @@ $(document).ready(function() {
 // Courses accordion
 
 // Get DOM elements
-const products = document.querySelectorAll('.product');
-const buttons = document.querySelectorAll('.button');
+const products = document.querySelectorAll('.product-carousel .product');
+const buttons = document.querySelectorAll('.product-buttons .button');
 
 // Add event listener to each button
 buttons.forEach((button, index) => {
