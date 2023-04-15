@@ -28,9 +28,14 @@ buttons.forEach(button => {
     // Remove active class from all products
     products.forEach(product => product.classList.remove('active'));
     // Add active class to target product
-    document.querySelector(`#${target}`).classList.add('active');
+    const targetProduct = document.querySelector(`#${target}`);
+    targetProduct.classList.add('active');
+    // Update target product's image
+    const targetImg = targetProduct.querySelector('img');
+    targetImg.src = `${target}.jpg`;
   });
 });
+
 
 
 
