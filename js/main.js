@@ -12,28 +12,26 @@ $(document).ready(function() {
 
 // Courses accordion
 
-const buttons = document.querySelectorAll('.button');
+// Get DOM elements
 const products = document.querySelectorAll('.product');
+const buttons = document.querySelectorAll('.button');
 
+// Add event listener to each button
 buttons.forEach(button => {
   button.addEventListener('click', () => {
+    // Remove active class from all buttons
+    buttons.forEach(button => button.classList.remove('active'));
+    // Add active class to clicked button
+    button.classList.add('active');
+    // Get target product ID
     const target = button.getAttribute('data-target');
-    products.forEach(product => {
-      if (product.getAttribute('id') === target) {
-        product.classList.add('active');
-      } else {
-        product.classList.remove('active');
-      }
-    });
-    buttons.forEach(btn => {
-      if (btn.getAttribute('data-target') === target) {
-        btn.classList.add('active');
-      } else {
-        btn.classList.remove('active');
-      }
-    });
+    // Remove active class from all products
+    products.forEach(product => product.classList.remove('active'));
+    // Add active class to target product
+    document.querySelector(`#${target}`).classList.add('active');
   });
 });
+
 
 
 // Contact form submission
