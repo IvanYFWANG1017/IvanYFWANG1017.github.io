@@ -1,138 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Music Education</title>
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
-	<!-- Custom CSS -->
-	<link rel="stylesheet" href="style.css">
-	<!-- 引用 jQuery 库 -->
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="js/main.js"></script>
-
+  <meta charset="UTF-8">
+  <title>Product Showcase</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-	<nav class="navbar navbar-expand-md navbar-dark bg-dark">
-		<div class="container">
-			<a class="navbar-brand" href="#">Music Education</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarCollapse">
-				<ul class="navbar-nav ml-auto">
-					<li class="nav-item">
-						<a class="nav-link" href="#">Home</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#about">About</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#courses">Courses</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#contact">Contact Us</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-
-	<header class="jumbotron">
-		<div class="container">
-			<h1 class="display-4">Learn Music Today!</h1>
-			<p class="lead">Join us to learn music from the best instructors in the industry.</p>
-			<a href="#courses" class="btn btn-primary btn-lg">View Courses</a>
-		</div>
-	</header>
-
-	<section id="about">
-		<div class="container">
-			<h2>About Us</h2>
-			<p>Music Education is a leading provider of online music education courses. Our mission is to provide high-quality music education to students of all ages and skill levels. We offer a wide range of courses taught by experienced instructors who are passionate about music and dedicated to helping students achieve their musical goals.</p>
-		</div>
-	</section>
-
-	<section id="courses">
-	
-                <div class="product-showcase">
-   			<div class="product-carousel">
-      				<div class="product active" id="product1">
-        				<img src="image1.PNG" alt="Product 1">
-        				<h3>Product 1</h3>
-        				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      				</div>
-      				<div class="product" id="product2">
-        				<img src="image2.PNG" alt="Product 2">
-        				<h3>Product 2</h3>
-        				<p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      				</div>
-      				<div class="product" id="product3">
-        				<img src="image3.PNG" alt="Product 3">
-        				<h3>Product 3</h3>
-        				<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      				</div>
-      				<div class="product" id="product4">
-        				<img src="image2.PNG" alt="Product 4">
-        				<h3>Product 4</h3>
-        				<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-      				</div>
-      				<div class="product" id="product5">
-        				<img src="image1.PNG" alt="Product 5">
-        				<h3>Product 5</h3>
-        				<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      				</div>
-    			</div>
-		</div>
-    		<div class="product-buttons">
-      			<button class="button active" data-target="product1"></button>
-      			<button class="button" data-target="product2"></button>
-      			<button class="button" data-target="product3"></button>
-      			<button class="button" data-target="product4"></button>
-      			<button class="button" data-target="product5"></button>
-    		</div>
-	</section>
-
-<section id="contact">
-	<div class="container">
-		<h2>Contact Us</h2>
-		<form action="submit.php" method="POST">
-			<div class="form-group">
-				<label for="name">Name</label>
-				<input type="text" name="name" id="name" class="form-control" required>
-			</div>
-			<div class="form-group">
-				<label for="email">Email</label>
-				<input type="email" name="email" id="email" class="form-control" required>
-			</div>
-			<div class="form-group">
-				<label for="message">Message</label>
-				<textarea name="message" id="message" cols="30" rows="10" class="form-control" required></textarea>
-			</div>
-			<button type="submit" class="btn btn-primary">Send Message</button>
-		</form>
-	</div>
-</section>
-
-<footer class="bg-dark text-light">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-6">
-				<p>&copy; Music Education 2023</p>
-			</div>
-			<div class="col-md-6">
-				<ul class="list-inline">
-					<li class="list-inline-item"><a href="#">Terms of Use</a></li>
-					<li class="list-inline-item"><a href="#">Privacy Policy</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-</footer>
-
-<!-- Bootstrap JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <div class="product-showcase">
+    <div class="product-carousel">
+      <div class="product active" id="product1">
+        <img src="product1.jpg" alt="Product 1">
+        <h3>Product 1</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+      <div class="product" id="product2">
+        <img src="product2.jpg" alt="Product 2">
+        <h3>Product 2</h3>
+        <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+      <div class="product" id="product3">
+        <img src="product3.jpg" alt="Product 3">
+        <h3>Product 3</h3>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div class="product" id="product4">
+        <img src="product4.jpg" alt="Product 4">
+        <h3>Product 4</h3>
+        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+      </div>
+      <div class="product" id="product5">
+        <img src="product5.jpg" alt="Product 5">
+        <h3>Product 5</h3>
+        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+    </div>
+    <div class="product-buttons">
+      <button class="button active" data-target="product1">1</button>
+      <button class="button" data-target="product2">2</button>
+      <button class="button" data-target="product3">3</button>
+      <button class="button" data-target="product4">4</button>
+      <button class="button" data-target="product5">5</button>
+    </div>
+  </div>
+  <script src="main.js"></script>
 </body>
-</html>						
+</html>
