@@ -12,45 +12,28 @@ $(document).ready(function() {
 
 // Courses accordion
 
-// Store the current active image index
-let currentImageIndex = 2;
+const buttons = document.querySelectorAll('.button');
+const products = document.querySelectorAll('.product');
 
-// Get the image container and all images
-const imageContainer = document.querySelector('.image-container');
-const images = imageContainer.querySelectorAll('img');
-
-// Get the left and right arrow buttons
-const leftArrow = document.querySelector('.arrow.left');
-const rightArrow = document.querySelector('.arrow.right');
-
-// Add event listeners to the arrow buttons
-leftArrow.addEventListener('click', () => {
-  currentImageIndex = currentImageIndex === 0 ? images.length - 1 : currentImageIndex - 1;
-  updateImages();
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    const target = button.getAttribute('data-target');
+    products.forEach(product => {
+      if (product.getAttribute('id') === target) {
+        product.classList.add('active');
+      } else {
+        product.classList.remove('active');
+      }
+    });
+    buttons.forEach(btn => {
+      if (btn.getAttribute('data-target') === target) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    });
+  });
 });
-
-rightArrow.addEventListener('click', () => {
-  currentImageIndex = currentImageIndex === images.length - 1 ? 0 : currentImageIndex + 1;
-  updateImages();
-});
-
-// Update the images based on the current active index
-function updateImages() {
-  // Set the current active image class to inactive
-  images[currentImageIndex].classList.add('active');
-  images[currentImageIndex].classList.remove('inactive');
-
-  // Set the images on the left and right of the active image to be slightly smaller and faded out
-  let leftIndex = currentImageIndex === 0 ? images.length - 1 : currentImageIndex - 1;
-  let rightIndex = currentImageIndex === images.length - 1 ? 0 : currentImageIndex + 1;
-
-  images[leftIndex].classList.remove('active');
-  images[leftIndex].classList.add('inactive');
-
-  images[rightIndex].classList.remove('active');
-  images[rightIndex].classList.add('inactive');
-}
-
 
 
 // Contact form submission
