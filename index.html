@@ -1,47 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>Product Showcase</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>公司网站</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="product-showcase">
-    <div class="product-carousel">
-      <div class="product active" id="product1">
-        <img src="image1.PNG" alt="Product 1">
-        <h3>Product 1</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
-      <div class="product" id="product2">
-        <img src="image2.PNG" alt="Product 2">
-        <h3>Product 2</h3>
-        <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      </div>
-      <div class="product" id="product3">
-        <img src="image3.PNG" alt="Product 3">
-        <h3>Product 3</h3>
-        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      </div>
-      <div class="product" id="product4">
-        <img src="image2.PNG" alt="Product 4">
-        <h3>Product 4</h3>
-        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-      </div>
-      <div class="product" id="product5">
-        <img src="image1.PNG" alt="Product 5">
-        <h3>Product 5</h3>
-        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div>
-    </div>
-    <div class="product-buttons">
-      <button class="button active" data-target="product1">1</button>
-      <button class="button" data-target="product2">2</button>
-      <button class="button" data-target="product3">3</button>
-      <button class="button" data-target="product4">4</button>
-      <button class="button" data-target="product5">5</button>
-    </div>
-  </div>
-  <script src="js/main.js"></script>
+  <header>
+    <h1>公司名称</h1>
+  </header>
+  <nav>
+    <a href="index.html">首页</a>
+    <a href="about.html">关于我们</a>
+    <a href="products.html">产品和服务</a>
+    <a href="contact.html">联系我们</a>
+  </nav>
+  <main>
+    <section>
+      <h2>公司简介</h2>
+      <p>公司成立于2023年，是一家专注于绿色钢铁生产的科技型企业。公司拥有先进的短流程炼钢技术，可以有效减少污染物排放、降低能耗、提高资源利用效率。公司致力于为客户提供高品质的绿色钢铁产品和服务，为实现碳中和目标贡献力量。</p>
+    </section>
+    <section>
+      <h2>产品和服务</h2>
+      <ul>
+        <li>钢材</li>
+        <li>钢板</li>
+        <li>钢管</li>
+        <li>型钢</li>
+      </ul>
+    </section>
+    <section>
+      <h2>联系我们</h2>
+      <p>电话：138-8888-8888</p>
+      <p>邮箱：info@company.com</p>
+      <p>地址：中国北京市朝阳区</p>
+    </section>
+  </main>
+  <footer>
+    <p>版权所有 © 2023 公司名称</p>
+  </footer>
 </body>
 </html>
