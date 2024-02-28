@@ -1,0 +1,50 @@
+HTML
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>联系我们</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>公司名称</h1>
+  </header>
+  <nav>
+    <a href="index.html">首页</a>
+    <a href="about.html">关于我们</a>
+    <a href="products.html">产品和服务</a>
+    <a href="contact.html">联系我们</a>
+  </nav>
+  <main>
+    <section>
+      <h2>联系我们</h2>
+      <p>如果您有任何问题或建议，请联系我们：</p>
+      <ul>
+        <li>电话：138-8888-8888</li>
+        <li>邮箱：info@company.com</li>
+        <li>地址：中国北京市朝阳区</li>
+      </ul>
+      <p>您也可以通过以下方式联系我们：</p>
+      <ul>
+        <li>微信：公司微信公众号</li>
+        <li>微博：公司微博账号</li>
+      </ul>
+    </section>
+    <section>
+      <h2>联系方式</h2>
+      <form action="contact.php" method="post">
+        <input type="text" name="name" placeholder="姓名">
+        <input type="text" name="email" placeholder="邮箱">
+        <input type="text" name="phone" placeholder="电话">
+        <textarea name="message" placeholder="留言"></textarea>
+        <button type="submit">提交</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>版权所有 © 2023 公司名称</p>
+  </footer>
+</body>
+</html>
