@@ -41,6 +41,31 @@
     </section>
   </main>
   <footer>
+    <script>
+const langSwitchBtn = document.getElementById('lang-switch');
+const langText = document.getElementById('lang-text');
+
+langSwitchBtn.addEventListener('click', function() {
+  // 切换语言
+  if (langText.textContent === '中文') {
+    // 切换到英文
+    langText.textContent = 'English';
+    // 加载英文语言包
+    loadLang('en-US.js');
+  } else {
+    // 切换到中文
+    langText.textContent = '中文';
+    // 加载中文语言包
+    loadLang('zh-CN.js');
+  }
+});
+
+function loadLang(langFile) {
+  const script = document.createElement('script');
+  script.src = langFile;
+  document.body.appendChild(script);
+}
+</script>
     <p>版权所有 © 2024 ANGANG (ASIA-PACIFIC) TECHNOLOGY PTE. LTD.</p>
   </footer>
 </body>
