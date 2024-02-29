@@ -13,12 +13,21 @@
   <header>
     <h1>ANGANG (ASIA-PACIFIC) TECHNOLOGY PTE. LTD.</h1>
   </header>
-  <nav>
-    <a href="index.html">首页</a>
-    <a href="about.html">关于我们</a>
-    <a href="products.html">产品和服务</a>
-    <a href="contact.html">联系我们</a>
-  </nav>
+    <h1>公司名称</h1>
+    <nav>
+      <a href="index.html">
+        <span id="home-text">首页</span>
+      </a>
+      <a href="about.html">
+        <span id="about-text">关于我们</span>
+      </a>
+      <a href="products.html">
+        <span id="products-text">产品和服务</span>
+      </a>
+      <a href="contact.html">
+        <span id="contact-text">联系我们</span>
+      </a>
+    </nav>
   <main>
     <section>
       <h2>公司简介</h2>
@@ -42,30 +51,30 @@
   </main>
   <footer>
     <script>
-const langSwitchBtn = document.getElementById('lang-switch');
-const langText = document.getElementById('lang-text');
+    const langSwitchBtn = document.getElementById('lang-switch');
+    const langText = document.getElementById('lang-text');
 
-langSwitchBtn.addEventListener('click', function() {
-  // 切换语言
-  if (langText.textContent === '中文') {
-    // 切换到英文
-    langText.textContent = 'English';
-    // 加载英文语言包
-    loadLang('en-US.js');
-  } else {
-    // 切换到中文
-    langText.textContent = '中文';
-    // 加载中文语言包
-    loadLang('zh-CN.js');
-  }
-});
+    langSwitchBtn.addEventListener('click', function() {
+      // 切换语言
+      if (langText.textContent === '中文') {
+        // 切换到英文
+        langText.textContent = 'English';
+        // 加载英文语言包
+        loadLang('en-US.js');
+      } else {
+        // 切换到中文
+        langText.textContent = '中文';
+        // 加载中文语言包
+        loadLang('zh-CN.js');
+      }
+    });
 
-function loadLang(langFile) {
-  const script = document.createElement('script');
-  script.src = langFile;
-  document.body.appendChild(script);
-}
-</script>
+    function loadLang(langFile) {
+      const script = document.createElement('script');
+      script.src = langFile;
+      document.body.appendChild(script);
+    }
+    </script>
     <p>版权所有 © 2024 ANGANG (ASIA-PACIFIC) TECHNOLOGY PTE. LTD.</p>
   </footer>
 </body>
