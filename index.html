@@ -10,23 +10,23 @@
   <header>
     <h1>ANGANG (ASIA-PACIFIC) TECHNOLOGY PTE. LTD.</h1>
   </header>
-    <nav>
-      <a href="index.html">
-        <span id="lang-home">Home</span>
-      </a>
-      <a href="about.html">
-        <span id="about-text">关于我们</span>
-      </a>
-      <a href="products.html">
-        <span id="products-text">产品和服务</span>
-      </a>
-      <a href="contact.html">
-        <span id="contact-text">联系我们</span>
-      </a>
-      <button id="lang-switch">
-        <span id="lang-text">中文</span>
-      </button>
-    </nav>
+  <nav>
+    <a href="index.html">
+      <span id="lang-home">首页</span>
+    </a>
+    <a href="about.html">
+      <span id="about-text">关于我们</span>
+    </a>
+    <a href="products.html">
+      <span id="products-text">产品和服务</span>
+    </a>
+    <a href="contact.html">
+      <span id="contact-text">联系我们</span>
+    </a>
+    <button id="lang-switch">
+      <span id="lang-text">中文</span>
+    </button>
+  </nav>
   <main>
     <section>
       <h2>公司简介</h2>
@@ -56,29 +56,61 @@
     const langSwitchBtn = document.getElementById('lang-switch');
     const langText = document.getElementById('lang-text');
 
+    // 定义语言包
+    const lang = {
+      'zh-CN': {
+        "home": "首页",
+        "about": "关于我们",
+        "products": "产品和服务",
+        "contact": "联系我们",
+        "lang": "中文"
+      },
+      'en-US': {
+        "home": "Home",
+        "about": "About Us",
+        "products": "Products and Services",
+        "contact": "Contact Us",
+        "lang": "English"
+      }
+    };
+
+    // 加载当前语言包
+    const currentLang = localStorage.getItem('lang') || 'zh-CN';
+    loadLang(currentLang);
+
     langSwitchBtn.addEventListener('click', function() {
       // 切换语言
-      if (langText.textContent === '中文') {
-        // 切换到英文
-        langText.textContent = 'English';
-        // 加载英文语言包
-        loadLang('js/en-US.js');
-      } else {
-        // 切换到中文
-        langText.textContent = '中文';
-        // 加载中文语言包
-        loadLang('js/zh-CN.js');
+      if (langText.textContent === lang[currentLang].lang) {
+        // 切换到另一种语言
+        const nextLang = currentLang === 'zh-CN' ? 'en-US' : 'zh-CN';
+        langText.textContent = lang[nextLang].lang;
+        localStorage.setItem('lang', nextLang);
+        // 加载新的语言包
+        loadLang(nextLang);
       }
     });
 
-    function loadLang(langFile) {
+    function loadLang(lang) {
+      // 移除旧的语言包
+      const oldScript = document.querySelector('script[src="js/' + currentLang + '.js"]');
+      if (oldScript) {
+        oldScript.parentNode.removeChild(oldScript);
+      }
+
+      // 添加新的语言包
       const script = document.createElement('script');
-      script.src = langFile;
+      script.src = 'js/' + lang + '.js';
       document.body.appendChild(script);
+
+      // 更新页面上的文本
+      for (const key in lang) {
+        const elements = document.querySelectorAll('[data-lang="' + key + '"]');
+        for (const element of elements) {
+          element.textContent = lang[key];
+        }
+      }
     }
   </script>
-  
 </body>
 </html>
-
     
