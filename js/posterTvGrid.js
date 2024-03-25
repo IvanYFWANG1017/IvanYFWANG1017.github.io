@@ -1,10 +1,3 @@
-/* AB模板网 整站模板下载 */
-/* 模板：Www.AdminBuy.Cn */
-/* 仿站：Fang.AdminBuy.Cn */
-/* 素材：Sc.AdminBuy.Cn */
-/* js特效：js.AdminBuy.Cn */
-/* 在线工具 Tool.Adminbuy.Cn */
-/* QQ：9490489 */
 (function(jq){
 	var posterTvGrid = function(o, options, data){
 		this.parent = jq("#"+ o);
