@@ -412,3 +412,10 @@ b
   </footer>
 </body>
 </html>
+<script type="text/javascript">
+	$('.left-category ul li').hover(function(){
+		var index = $(this).index();
+		$(this).addClass('on').siblings().removeClass('on');
+		$('.pro-right').removeClass('active').eq(index).addClass('active');
+	})
+</script>
