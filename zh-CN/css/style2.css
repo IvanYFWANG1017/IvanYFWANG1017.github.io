@@ -67,14 +67,14 @@ main {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 20px; /* Adds consistent spacing */
+    gap: 30px; /* Adds consistent spacing */
 }
 
 .partner {
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
-    width: calc(25% - 20px);
+    width: calc(45% - 30px);
     padding: 15px;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -112,7 +112,7 @@ main {
 
 @media (max-width: 480px) {
     .partner {
-        width: calc(100% - 20px);
+        width: calc(100% - 30px);
     }
 }
 
