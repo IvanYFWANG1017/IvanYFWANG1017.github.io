@@ -4,8 +4,153 @@ b
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ansteel Roll Co. Ltd.</title>
-    <link rel="stylesheet" href="css/style2.css">
+    <title>ANGANG (ASIA-PACIFIC) TECHNOLOGY PTE. LTD.</title>
+   <style>
+        /* 重置样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* 主体内容样式 */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            color: #333;
+            flex-direction: column;
+        }
+
+        /* 头部样式 */
+        header {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        /* 导航栏样式 */
+        nav {
+            background-color: #ccc;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav a {
+            display: inline-block;
+            padding: 10px 15px;
+            color: #333;
+            text-decoration: none;
+            margin: 0 10px;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background-color: #000;
+            color: #fff;
+        }
+
+        /* 左侧菜单样式 */
+        aside {
+            background-color: #f9f9f9;
+            width: 250px;
+            height: calc(100vh - 100px); /* Adjust for header height */
+            padding: 20px;
+            border-right: 1px solid #ddd;
+            position: sticky;
+            top: 100px; /* Make the aside sticky */
+        }
+
+        aside h2 {
+            margin-bottom: 20px;
+        }
+
+        aside a {
+            display: block;
+            padding: 10px;
+            color: #333;
+            text-decoration: none;
+            margin-bottom: 10px;
+            background-color: #f4f4f4;
+            border-radius: 5px;
+        }
+
+        aside a:hover {
+            background-color: #000;
+            color: #fff;
+        }
+
+        /* 主体内容样式 */
+        main {
+            flex-grow: 1;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+
+        section {
+            display: none; /* Initially hidden */
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #fafafa;
+            margin-top: 20px;
+        }
+
+        section.active {
+            display: block; /* Show when active */
+        }
+        
+        /* 合作伙伴网格样式 */
+        .partner-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .partner {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 350px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .partner img {
+            max-width: 100%;
+            max-height: 150px;
+            object-fit: contain;
+            margin-bottom: 20px;
+        }
+
+        .partner h3 {
+            margin-bottom: 15px;
+            font-size: 1.4em;
+            color: #000;
+        }
+
+        .partner p {
+            font-size: 1em;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* Hover效果 */
+        .partner:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+    </style>
 </head>
 <body>
 
@@ -13,19 +158,20 @@ b
     <h1>ANGANG (ASIA-PACIFIC) TECHNOLOGY PTE. LTD.</h1>
 </header>
 
-    <nav>
-        <a href="index.html">首页</a>
-        <a href="about.html">关于我们</a>
-        <a href="products.html">产品与服务</a>
-        <a href="partner.html">合作伙伴</a>
-        <a href="contact">联系我们</a>
-    </nav>
-    
-<aside>
-    <h2>Navigation</h2>
-    <a href="#" onclick="showSection('company-intro')">公司简介</a>
-    <a href="#" onclick="showSection('certificate')">授权书</a>
-</aside>
+<nav>
+    <a href="index.html">首页</a>
+    <a href="about.html">关于我们</a>
+    <a href="products.html">产品与服务</a>
+    <a href="partner.html">合作伙伴</a>
+    <a href="contact.html">联系我们</a>
+</nav>
+
+<div style="display: flex; flex-grow: 1;">
+    <aside>
+        <h2>导航</h2>
+        <a href="#" onclick="showSection('company-intro')">公司简介</a>
+        <a href="#" onclick="showSection('certificate')">授权书</a>
+    </aside>
 
 <main>
     <section id="company-intro" class="active">
@@ -54,7 +200,7 @@ b
 </main>
 
 <footer>
-    <p>&copy; 2024 Ansteel Roll Co. Ltd. All rights reserved.</p>
+    <p>&copy; 2024 ANGANG (ASIA-PACIFIC) TECHNOLOGY PTE. LTD. All rights reserved.</p>
 </footer>
 
 <script>
@@ -66,6 +212,9 @@ b
         document.getElementById(sectionId).classList.add('active');
     }
 </script>
+
+</body>
+</html>
 
 </body>
 </html>
