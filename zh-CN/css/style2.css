@@ -49,35 +49,6 @@
             transition: background-color 0.3s ease;
         }
 
-        /* 左侧菜单样式 */
-        aside {
-            background-color: #f9f9f9;
-            width: 250px;
-            height: 100vh;
-            padding: 20px;
-            border-right: 1px solid #ddd;
-        }
-
-        aside h2 {
-            margin-bottom: 20px;
-        }
-
-        aside a {
-            display: block;
-            padding: 10px;
-            color: #333;
-            text-decoration: none;
-            margin-bottom: 10px;
-            background-color: #f4f4f4;
-            border-radius: 5px;
-        }
-
-        aside a:hover {
-            background-color: #000;
-            color: #fff;
-        }
-
-
 /* 主体内容样式 */
 body {
     font-family: 'Arial', sans-serif;
@@ -149,18 +120,6 @@ main {
         width: calc(100% - 30px);
     }
 }
-
-        section {
-            display: none; /* Initially hidden */
-            padding: 20px;
-            border-radius: 8px;
-            background-color: #fafafa;
-            margin-top: 20px;
-        }
-
-        section.active {
-            display: block; /* Show when active */
-        }
 
         /* 页脚样式 */
         footer {
