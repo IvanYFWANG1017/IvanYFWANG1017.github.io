@@ -64,38 +64,41 @@ main {
 
 /* 合作伙伴网格样式 */
 .partner-grid {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 30px; /* Adds consistent spacing */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Creates square-like layout */
+    gap: 30px;
 }
 
 .partner {
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
-    width: calc(45% - 30px);
-    padding: 15px;
+    padding: 20px;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 350px; /* Set a height to ensure it looks square */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .partner img {
     max-width: 120px;
     margin-bottom: 20px;
-    border-radius: 50%;
+    flex-grow: 1;
 }
 
 .partner h3 {
     margin-bottom: 15px;
-    font-size: 1.2em;
+    font-size: 1.4em;
     color: #2980b9;
 }
 
 .partner p {
-    font-size: 0.95em;
+    font-size: 1em;
     color: #7f8c8d;
+    line-height: 1.5;
 }
 
 /* Hover效果 */
