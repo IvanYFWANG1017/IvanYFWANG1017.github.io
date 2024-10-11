@@ -50,11 +50,11 @@
 
         /* 左侧菜单样式 */
         aside {
-            background-color: #f4f4f4;
+            background-color: #f9f9f9;
             width: 250px;
-            padding: 20px;
             height: 100vh;
-            border-right: 1px solid #ccc;
+            padding: 20px;
+            border-right: 1px solid #ddd;
         }
 
         aside h2 {
@@ -67,6 +67,7 @@
             color: #333;
             text-decoration: none;
             margin-bottom: 10px;
+            background-color: #f4f4f4;
             border-radius: 5px;
         }
 
@@ -84,6 +85,7 @@ body {
 }
 
 main {
+    flex-grow: 1;
     max-width: 1200px;
     margin: 40px auto;
     padding: 20px;
@@ -150,13 +152,13 @@ main {
         section {
             display: none; /* Initially hidden */
             padding: 20px;
-            border: 1px solid #ccc;
-            background-color: #fafafa;
             border-radius: 8px;
+            background-color: #fafafa;
+            margin-top: 20px;
         }
 
         section.active {
-            display: block; /* Display when active */
+            display: block; /* Show when active */
         }
 
         /* 页脚样式 */
