@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Partners</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #0073e6;
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .partner-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .partner {
+            background-color: #f9f9f9;
+            padding: 15px;
+            margin: 10px;
+            border: 1px solid #ddd;
+            width: calc(33% - 40px);
+            text-align: center;
+        }
+        .partner img {
+            max-width: 100px;
+            margin-bottom: 10px;
+        }
+        .partner h3 {
+            margin: 10px 0;
+        }
+        @media (max-width: 768px) {
+            .partner {
+                width: calc(50% - 40px);
+            }
+        }
+        @media (max-width: 480px) {
+            .partner {
+                width: calc(100% - 40px);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Our Global Partners</h1>
+</header>
+
+<div class="container">
+    <section class="partner-grid">
+        <div class="partner">
+            <img src="partner-logo1.png" alt="Partner 1">
+            <h3>Partner Name 1</h3>
+            <p>Brief description of the partner's contribution and mission.</p>
+        </div>
+        <div class="partner">
+            <img src="partner-logo2.png" alt="Partner 2">
+            <h3>Partner Name 2</h3>
+            <p>Brief description of the partner's contribution and mission.</p>
+        </div>
+        <div class="partner">
+            <img src="partner-logo3.png" alt="Partner 3">
+            <h3>Partner Name 3</h3>
+            <p>Brief description of the partner's contribution and mission.</p>
+        </div>
+    </section>
+</div>
+
+</body>
+</html>
