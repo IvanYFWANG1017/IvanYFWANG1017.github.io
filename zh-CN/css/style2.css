@@ -48,6 +48,33 @@
             transition: background-color 0.3s ease;
         }
 
+        /* 左侧菜单样式 */
+        aside {
+            background-color: #f4f4f4;
+            width: 250px;
+            padding: 20px;
+            height: 100vh;
+            border-right: 1px solid #ccc;
+        }
+
+        aside h2 {
+            margin-bottom: 20px;
+        }
+
+        aside a {
+            display: block;
+            padding: 10px;
+            color: #333;
+            text-decoration: none;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        aside a:hover {
+            background-color: #000;
+            color: #fff;
+        }
+
 
 /* 主体内容样式 */
 body {
