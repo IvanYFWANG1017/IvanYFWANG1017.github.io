@@ -3,43 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ANGANG (ASIA-PACIFIC) TECHNOLOGY PTE. LTD.</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Ansteel Roll Co. Ltd.</title>
+    <style>
+        /* 重置样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* 整体样式 */
+        body {
+            font-family: sans-serif;
+            display: flex;
+            background-color: #fff;
+        }
+
+        /* 左侧菜单样式 */
+        aside {
+            background-color: #f4f4f4;
+            width: 250px;
+            padding: 20px;
+            height: 100vh;
+            border-right: 1px solid #ccc;
+        }
+
+        aside h2 {
+            margin-bottom: 20px;
+        }
+
+        aside a {
+            display: block;
+            padding: 10px;
+            color: #333;
+            text-decoration: none;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        aside a:hover {
+            background-color: #000;
+            color: #fff;
+        }
+
+        /* 主体内容样式 */
+        main {
+            flex-grow: 1;
+            padding: 20px;
+        }
+
+        section {
+            display: none; /* Initially hidden */
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #fafafa;
+            border-radius: 8px;
+        }
+
+        section.active {
+            display: block; /* Display when active */
+        }
+
+        /* 页脚样式 */
+        footer {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
 
-<header>
-    <h1>ANGANG (ASIA-PACIFIC) TECHNOLOGY PTE. LTD.</h1>
-</header>
-
-<nav>
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Partners</a>
-    <a href="#">Contact</a>
-</nav>
+<aside>
+    <h2>Navigation</h2>
+    <a href="#" onclick="showSection('company-intro')">公司简介</a>
+    <a href="#" onclick="showSection('certificate')">授权书</a>
+</aside>
 
 <main>
-    <section>
-        <h2>Introduction to Ansteel Roll Co. Ltd.</h2>
-        <p>Ansteel Roll Co. Ltd., established in 1936, is located in Anshan, Liaoning, with a history of 85 years in roll manufacturing. It is one of the largest specialized roll manufacturers in China. The company is known for its extensive experience, advanced technology, and ISO9001 certification. Their primary products are plate and strip rolls used in rolling mills.</p>
+    <section id="company-intro" class="active">
+        <h2>公司简介</h2>
+        <p>Ansteel Roll Co. Ltd., established in 1936, is located in Anshan, Liaoning. With a history of 85 years in roll manufacturing, it is one of China's largest specialized roll manufacturers, known for its extensive experience and ISO9001 certification.</p>
     </section>
 
-    <section>
-        <h2>Main Products</h2>
-        <ul>
-            <li>High Speed Steel Roll</li>
-            <li>High Chrome Steel Roll</li>
-            <li>Enhanced High NiCrMo ICDP Roll</li>
-            <li>High Nickel-Niobium Wear-resistant Roll</li>
-            <li>Other: Semi-steel, Cast/Forged Steel Rolls</li>
-        </ul>
+    <section id="certificate">
+        <h2>授权书</h2>
+        <p>This is where the content about the authorization certificates will be displayed. You can add specific details or links to download the certificates here.</p>
     </section>
 </main>
 
 <footer>
-    <p>&copy; 2024 ANGANG (ASIA-PACIFIC) TECHNOLOGY PTE. LTD. All rights reserved.</p>
+    <p>&copy; 2024 Ansteel Roll Co. Ltd. All rights reserved.</p>
 </footer>
+
+<script>
+    function showSection(sectionId) {
+        // Hide all sections
+        document.querySelectorAll('main section').forEach(section => section.classList.remove('active'));
+
+        // Show the selected section
+        document.getElementById(sectionId).classList.add('active');
+    }
+</script>
 
 </body>
 </html>
