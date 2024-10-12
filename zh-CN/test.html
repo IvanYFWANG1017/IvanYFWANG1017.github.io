@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ansteel Roll Co. Ltd.</title>
+    <style>
+        /* 重置样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* 主体内容样式 */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            color: #333;
+            min-height: 100vh;
+        }
+
+        /* 头部样式 */
+        header {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        /* 导航栏样式 */
+        nav {
+            background-color: #ccc;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+        }
+
+        nav a {
+            display: inline-block;
+            padding: 10px 15px;
+            color: #333;
+            text-decoration: none;
+            margin: 0 10px;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background-color: #000;
+            color: #fff;
+        }
+
+        /* 下拉菜单样式 */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #fff;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            width: 150px;
+            border-radius: 5px;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 10px;
+            text-align: left;
+            background-color: #ccc;
+            margin: 0;
+            color: #333;
+            border-radius: 0;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* 左侧菜单样式 */
+        aside {
+            background-color: #f9f9f9;
+            width: 250px;
+            height: calc(100vh - 100px); /* Adjust for header height */
+            padding: 20px;
+            border-right: 1px solid #ddd;
+            position: sticky;
+            top: 100px; /* Make the aside sticky */
+        }
+
+        aside h2 {
+            margin-bottom: 20px;
+        }
+
+        aside a {
+            display: block;
+            padding: 10px;
+            color: #333;
+            text-decoration: none;
+            margin-bottom: 10px;
+            background-color: #f4f4f4;
+            border-radius: 5px;
+        }
+
+        aside a:hover {
+            background-color: #000;
+            color: #fff;
+        }
+
+        /* 主体内容样式 */
+        main {
+            flex-grow: 1;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+
+        section {
+            display: none; /* Initially hidden */
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #fafafa;
+            margin-top: 20px;
+        }
+
+        section.active {
+            display: block; /* Show when active */
+        }
+
+        /* 图片样式 */
+        .certificate-images {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+        }
+
+        .certificate-images img {
+            max-width: 45%; /* Set size for images */
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.3s ease; /* Add smooth transition */
+        }
+
+        .certificate-images img:hover {
+            transform: scale(1.1); /* Slightly increase the image size on hover */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+        }
+
+        /* Footer 样式 */
+        footer {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+            position: relative;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>ANGANG (ASIA-PACIFIC) TECHNOLOGY PTE. LTD.</h1>
+</header>
+
+<nav>
+    <a href="index.html">首页</a>
+    <a href="about.html">关于我们</a>
+    <a href="products.html">产品与服务</a>
+    <div class="dropdown">
+        <a href="partner.html">合作伙伴</a>
+        <div class="dropdown-content">
+            <a href="partner1.html">合作伙伴1</a>
+            <a href="partner2.html">合作伙伴2</a>
+            <a href="partner3.html">合作伙伴3</a>
+        </div>
+    </div>
+    <a href="contact.html">联系我们</a>
+    <a href="#" onclick="switchLanguage('cn')">中文</a> <!-- Chinese Language Option -->
+    <a href="#" onclick="switchLanguage('en')">English</a> <!-- English Language Option -->
+</nav>
+
+<div style="display: flex; flex-grow: 1;">
+    <aside>
+        <h2>导航</h2>
+        <a href="#" onclick="showSection('company-intro')">公司简介</a>
+        <a href="#" onclick="showSection('certificate')">授权书</a>
+    </aside>
+
+    <main>
+        <section id="company-intro" class="active">
+            <h2>公司简介</h2>
+            <p>鞍钢轧辊有限公司成立于1936年，是中国最大的专业轧辊制造企业之一。公司位于辽宁省鞍山市，拥有85年的生产历史，专注于铸铁和铸钢轧辊的研发与生产。鞍钢轧辊以其优质的产品和先进的技术在国内外市场享有良好的声誉。</p>
+        </section>
+
+        <section id="certificate">
+            <h2>授权书</h2>
+            <div class="certificate-images">
+                <a href="certificate1.pdf" download="Certificate1.pdf">
+                    <img src="certificate1.jpg" alt="授权书1">
+                </a>
+                <a href="certificate2.pdf" download="Certificate2.pdf">
+                    <img src="certificate2.jpg" alt="授权书2">
+                </a>
+            </div>
+        </section>
+    </main>
+</div>
+
+<footer>
+    <p>&copy; 2024 ANGANG (ASIA-PACIFIC) TECHNOLOGY PTE. LTD. All rights reserved.</p>
+</footer>
+
+<script>
+    function showSection(sectionId) {
+        // Hide all sections
+        document.querySelectorAll('main section').forEach(section => section.classList.remove('active'));
+
+        // Show the selected section
+        document.getElementById(sectionId).classList.add('active');
+    }
+
+    function switchLanguage(language) {
+        if (language === 'cn') {
+            // Logic to switch to Chinese version
+            alert("切换到中文"); // Placeholder for actual implementation
+        } else if (language === 'en') {
+            // Logic to switch to English version
+            alert("Switching to English"); // Placeholder for actual implementation
+        }
+    }
+</script>
+
+</body>
+</html>
