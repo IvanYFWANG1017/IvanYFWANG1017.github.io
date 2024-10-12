@@ -22,9 +22,11 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
-        header h1 {
-            font-size: 2.5em;
-        }
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    padding: 10px;
+}
 
 /* Language selection style */
 .language-dropdown {
