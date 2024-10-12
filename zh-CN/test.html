@@ -58,7 +58,9 @@
 
         /* 下拉菜单样式 */
         .dropdown {
-            position: relative;
+            position: absolute;
+            top: 10px;
+            right: 10px;
             display: inline-block;
         }
 
@@ -66,11 +68,11 @@
             display: none;
             position: absolute;
             top: 100%;
-            left: 0;
+            right: 0;
             background-color: #fff;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
             z-index: 1;
-            width: 150px;
+            width: 100px;
             border-radius: 5px;
         }
 
@@ -78,8 +80,6 @@
             display: block;
             padding: 10px;
             text-align: left;
-            background-color: #ccc;
-            margin: 0;
             color: #333;
             border-radius: 0;
         }
@@ -194,9 +194,13 @@
             <a href="partner3.html">合作伙伴3</a>
         </div>
     </div>
-    <a href="contact.html">联系我们</a>
-    <a href="#" onclick="switchLanguage('cn')">中文</a> <!-- Chinese Language Option -->
-    <a href="#" onclick="switchLanguage('en')">English</a> <!-- English Language Option -->
+    <div class="dropdown">
+        <a href="#">选择语言</a>
+        <div class="dropdown-content">
+            <a href="#" onclick="switchLanguage('cn')">中文</a>
+            <a href="#" onclick="switchLanguage('en')">English</a>
+        </div>
+    </div>
 </nav>
 
 <div style="display: flex; flex-grow: 1;">
