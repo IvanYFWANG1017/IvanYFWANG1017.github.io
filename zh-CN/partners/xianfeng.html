@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANGANG (ASIA-PACIFIC) TECHNOLOGY PTE. LTD.</title>
+   <style>
+        /* 重置样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* 整体样式 */
+        body {
+          font-family: 'Arial', sans-serif;
+          color: #333;
+          background-color: #f5f5f5;
+          line-height: 1.6;
+        }
+
+        /* 头部样式 */
+        header {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+            padding: 10px;
+        }
+
+        /* 导航栏样式 */
+        nav {
+            background-color: #34495e;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav a {
+            display: inline-block;
+            margin: 0 15px;
+            padding: 10px 20px;
+            color: #ecf0f1;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background-color: #2c3e50;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+
+        /* 左侧菜单样式 */
+        aside {
+            background-color: #f9f9f9;
+            width: 250px;
+            height: calc(100vh - 100px); /* Adjust for header height */
+            padding: 20px;
+            border-right: 1px solid #ddd;
+            position: sticky;
+            top: 100px; /* Make the aside sticky */
+        }
+
+        aside h2 {
+            margin-bottom: 20px;
+        }
+
+        aside a {
+            display: block;
+            padding: 10px;
+            color: #333;
+            text-decoration: none;
+            margin-bottom: 10px;
+            background-color: #f4f4f4;
+            border-radius: 5px;
+        }
+
+        aside a:hover {
+            background-color: #000;
+            color: #fff;
+        }
+
+        /* 主体内容样式 */
+        main {
+            flex-grow: 1;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+
+        section {
+            display: none; /* Initially hidden */
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #fafafa;
+            margin-top: 20px;
+        }
+
+        section.active {
+            display: block; /* Show when active */
+        }
+        
+       /* 图片样式 */
+        .certificate-images {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+        }
+
+        .certificate-images img {
+            max-width: 45%; /* Set size for images */
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.3s ease; /* Add smooth transition */
+        }
+
+        .certificate-images img:hover {
+            transform: scale(2.0); /* Slightly increase the image size on hover */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+        }
+
+        /* 页脚样式 */
+        footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 15px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>ANGANG (ASIA-PACIFIC) TECHNOLOGY PTE. LTD.</h1>
+</header>
+
+<nav>
+    <a href="https://ivanyfwang1017.github.io/zh-CN/index.html">首页</a>
+    <a href="https://ivanyfwang1017.github.io/zh-CN/about.html">关于我们</a>
+    <a href="https://ivanyfwang1017.github.io/zh-CN/products.html">产品与服务</a>
+    <a href="https://ivanyfwang1017.github.io/zh-CN/partner.html">合作伙伴</a>
+    <a href="https://ivanyfwang1017.github.io/zh-CN/contact.html">联系我们</a>
+</nav>
+
+<div style="display: flex; flex-grow: 1;">
+    <aside>
+        <h2>导航</h2>
+        <a href="#" onclick="showSection('company-intro')">公司简介</a>
+        <a href="#" onclick="showSection('certificate')">授权书</a>
+    </aside>
+
+    <main>
+        <section id="company-intro" class="active">
+            <h2>公司简介</h2>
+            <p>鞍钢轧辊有限公司成立于1935年，是中国第一家专门生产轧辊的企业，隶属于鞍钢集团。公司位于辽宁省鞍山市，拥有一流的铸造、加工技术以及先进的生产设备。近年来，鞍钢轧辊致力于技术创新和产品研发，已成为国内权威的专业轧辊生产企业。
+            <br><b>主要产品</b>
+            <br>鞍钢轧辊有限公司主要生产各类铸铁和铸钢轧辊，年生产能力达3万吨。产品广泛应用于热轧和冷轧钢铁的生产，具体包括：
+            <ul>
+                <li>高镍铬轧辊：用于高强度的轧制环境。</li>
+                <li>高铬钢轧辊：具备优良的耐磨性能。</li>
+                <li>其他轧辊：如半钢轧辊等。</li>
+            </ul>
+            <br><b>技术实力</b>
+            <br>公司在生产过程中严格遵循ISO9001质量管理体系，确保产品质量的可靠性。鞍钢轧辊不仅注重生产能力的提升，还不断引入先进的技术和设备，以保持在市场中的竞争力。
+            <br><b>市场地位</b>
+            <br>作为中国轧辊行业的领导者，鞍钢轧辊有限公司在国内外市场享有良好的声誉，产品出口到多个国家和地区。公司通过不断的技术革新和市场扩展，力争在全球钢铁行业中占据更大的份额。
+            <br>更多详细信息可访问 <a href="http://www.ansteel.cn/">鞍钢轧辊有限公司的官网</a> </p>
+        </section>
+
+        <section id="certificate">
+            <h2>授权书</h2>
+            <div class="certificate-images">
+                <a href="鞍钢-全权经销商授权书.pdf" download="鞍钢-全权经销商授权书.pdf">
+                    <img src="鞍钢授权中文.png" alt="授权书1">
+                </a>
+                <a href="Angang-Exclusive Distributor Authorization.pdf" download="Angang-Exclusive Distributor Authorization.pdf">
+                    <img src="鞍钢授权英文.png" alt="授权书2">
+                </a>
+            </div>
+        </section>
+    </main>
+</div>
+<footer>
+    <p>&copy; 2024 ANGANG (ASIA-PACIFIC) TECHNOLOGY PTE. LTD. All rights reserved.</p>
+</footer>
+
+<script>
+    function showSection(sectionId) {
+        // Hide all sections
+        document.querySelectorAll('main section').forEach(section => section.classList.remove('active'));
+
+        // Show the selected section
+        document.getElementById(sectionId).classList.add('active');
+    }
+</script>
+
+</body>
+</html>
+
+</body>
+</html>
