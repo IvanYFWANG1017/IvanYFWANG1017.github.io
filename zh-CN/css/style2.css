@@ -48,6 +48,43 @@
             transition: background-color 0.3s ease;
         }
 
+/* 下拉菜单样式 */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    width: 150px;
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    text-align: left;
+    background-color: #ccc;
+    margin: 0;
+    color: #333;
+    border-radius: 0;
+}
+
+.dropdown-content a:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
 /* 主体内容样式 */
 body {
     font-family: 'Arial', sans-serif;
