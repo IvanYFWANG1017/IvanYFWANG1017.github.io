@@ -68,7 +68,7 @@ b
 
           <div class="pro-right">
             <!-- Category 1 Products -->
-            <div class="category1 products active">
+            <div class="products category1 active">
               <ul>
                 <li>
                   <a href="#">
@@ -111,33 +111,32 @@ b
   </footer>
 
   <script>	 
-    // JavaScript for switching product categories
-    document.querySelectorAll('.left-category ul li.category').forEach(category => {
-      category.addEventListener('click', function() {
+// JavaScript for switching product categories
+document.querySelectorAll('.left-category ul li.category').forEach(category => {
+    category.addEventListener('click', function() {
         const selectedCategory = this.getAttribute('data-category');
 
         // Hide all product sections
         document.querySelectorAll('.products').forEach(productSection => {
-          productSection.classList.remove('active');
+            productSection.classList.remove('active');
         });
 
         // Show the selected category's products
         const activeCategory = document.querySelector(`.${selectedCategory}`);
         if (activeCategory) {
-          activeCategory.classList.add('active');
+            activeCategory.classList.add('active');
         }
 
         // Update active state in the sidebar
         document.querySelectorAll('.left-category ul li').forEach(item => {
-          item.classList.remove('on');
+            item.classList.remove('on');
         });
         this.classList.add('on'); // Highlight the selected category
-      });
     });
+});
 
-    // Initialize to show the first category by default
-    document.querySelector('.left-category ul li.category').click();
-
+// Initialize to show the first category by default
+document.querySelector('.left-category ul li.category').click();
 	  
     function switchLanguage(language) {
         if (language === 'cn') {
