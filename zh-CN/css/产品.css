@@ -154,7 +154,7 @@ body {
 
 .pro-right ul li img {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
     transition: opacity 0.3s ease;
 }
@@ -171,10 +171,10 @@ body {
 /* Mouse Hover to Show Full Image Text */
 .pro-right .text {
     position: absolute; /* Position the text over the image */
-    top: 0; /* Start at the top */
-    left: 0; /* Start from the left */
-    width: 100%; /* Cover the entire width */
-    height: 100%; /* Cover the entire height */
+    top: 10%; /* Start at the top */
+    left: 10%; /* Start from the left */
+    width: 90%; /* Cover the entire width */
+    height: 90%; /* Cover the entire height */
     display: flex; /* Use flex to center the text */
     align-items: center; /* Center vertically */
     justify-content: center; /* Center horizontally */
@@ -186,6 +186,7 @@ body {
     transition: opacity 0.3s ease; /* Smooth transition */
     z-index: 10; /* Ensure it is above the image */
     white-space: normal; /* Allow text to wrap */
+    overflow: auto; /* Allow scrolling if text exceeds the height */
 }
 
 .pro-right li:hover img {
@@ -194,10 +195,4 @@ body {
 
 .pro-right li:hover .text {
     opacity: 1; /* Show text on hover */
-}
-
-}
-
-.pro-right li:hover .text {
-    opacity: 1;
 }
