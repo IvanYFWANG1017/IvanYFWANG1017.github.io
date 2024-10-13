@@ -40,90 +40,359 @@
 
 	<body>
     		<!--产品中心-->
-<div class="pro-center">
-    <div class="container">
-        <div class="title">产品中心</div>
-        <div class="sub-title">
-            <span>——</span>
-            <span class="text">Products Center</span>
-            <span>——</span>
-        </div>
-        <div class="pro-content">
-            <div class="pro-left">
-                <div class="left-title">
-                    <span>-</span>
-                    <span class="text">产品类别</span>
-                    <span>-</span>
-                </div>
-                <div class="left-category">
-                    <ul>
-                        <li class="category" data-category="category1">轧辊</li>
-                        <li class="category" data-category="category2">磨床</li>
-                        <li class="category" data-category="category3">低温合金设备</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="pro-right">
-                <div class="category1">
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <div class="img">
-                                    <img src="images/pro1.png" alt="">
-                                    <p class="text">这是产品名称1</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <div class="img">
-                                    <img src="images/pro2.png" alt="">
-                                    <p class="text">这是产品名称2</p>
-                                </div>
-                            </a>
-                        </li>
-                        <!-- Add more products as needed -->
-                    </ul>
-                </div>
-                <div class="category2" style="display:none;">
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <div class="img">
-                                    <img src="images/pro3.png" alt="">
-                                    <p class="text">这是产品名称3</p>
-                                </div>
-                            </a>
-                        </li>
-                        <!-- Fewer products, only include what you have -->
-                    </ul>
-                </div>
-                <div class="category3" style="display:none;">
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <div class="img">
-                                    <img src="images/pro4.png" alt="">
-                                    <p class="text">这是产品名称4</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <div class="img">
-                                    <img src="images/pro5.png" alt="">
-                                    <p class="text">这是产品名称5</p>
-                                </div>
-                            </a>
-                        </li>
-                        <!-- More products -->
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
+		<div class="pro-center">
+			<div class="container">
+				<div class="title">产品中心</div>
+				<div class="sub-title">
+					<span>——</span>
+					<span class="text">Products Center</span>
+					<span>——</span>
+				</div>
+				<div class="pro-content">
+					<div class="pro-left">
+						<div class="left-title">
+							<span>-</span>
+							<span class="text">产品类别</span>
+							<span>-</span>
+						</div>
+						<!--分类，on状态为当前高亮-->
+						<div class="left-category">
+							<ul>
+								<li>轧辊</li>
+								<li class="on">磨床</li>
+								<li>低温合金设备</li>
+								<li>磨辊间管理系统</li>
+								<li>磨床改造服务</li>
+								<li>钢厂常用备品备件</li>
+							</ul>
+						</div>
+					</div>
+					<!--对应分类的内容，active状态为显示-->
+					<div class="pro-right">
+						<ul>
+							<li>
+								<a href="#">
+									<div class="img">
+										<img src="images/pro1.png" alt="">
+										<p class="text">这是产品名称</p> <!-- Text to show on hover -->										
+									</div>
+									<p>这是产品名称</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="img">
+										<img src="images/pro1.png" alt="">
+										<p class="text">这是产品名称</p> <!-- Text to show on hover -->
+									</div>
+									<p>这是产品名称</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="img">
+										<img src="images/pro1.png" alt="">
+										<p class="text">这是产品名称</p> <!-- Text to show on hover -->
+									</div>
+									<p>这是产品名称</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="img">
+										<img src="images/pro1.png" alt="">
+										<p class="text">这是产品名称</p> <!-- Text to show on hover -->
+									</div>
+									<p>这是产品名称</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="img">
+										<img src="images/pro1.png" alt="">
+										<p class="text">这是产品名称</p> <!-- Text to show on hover -->
+									</div>
+									<p>这是产品名称</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="img">
+										<img src="images/pro1.png" alt="">
+										<p class="text">这是产品名称</p> <!-- Text to show on hover -->
+									</div>
+									<p>这是产品名称</p>
+								</a>
+							</li>
+						</ul>
+					</div>				
+					<div class="pro-right active">
+						<ul>
+							<li>
+								<a href="#">
+									<div class="img">
+										<img src="images/pro2.png" alt="">
+										<p class="text">这是产品名称</p> <!-- Text to show on hover -->
+									</div>
+									<p>这是产品名称</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="img">
+										<img src="images/pro2.png" alt="">
+										<p class="text">这是产品名称</p> <!-- Text to show on hover -->
+									</div>
+									<p>这是产品名称</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="img">
+										<img src="images/pro2.png" alt="">
+										<p class="text">这是产品名称</p> <!-- Text to show on hover -->
+									</div>
+									<p>这是产品名称</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="img">
+										<img src="images/pro2.png" alt="">
+										<p class="text">这是产品名称</p> <!-- Text to show on hover -->
+									</div>
+									<p>这是产品名称</p>
+								</a>
+							</li>
+							<li>
+								<a href="http://www.adminbuy.cn">
+									<div class="img">
+										<img src="images/pro2.png" alt="">
+									</div>
+									<p>这是产品名称</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="img">
+										<img src="images/pro2.png" alt="">
+									</div>
+									<p>这是产品名称</p>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="pro-right">
+						<ul>
+							<li>
+								<a href="#">
+									<div class="img">
+										<img src="images/pro3.png" alt="">
+									</div>
+									<p>这是产品名称</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="img">
+										<img src="images/pro3.png" alt="">
+									</div>
+									<p>这是产品名称</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="img">
+										<img src="images/pro3.png" alt="">
+									</div>
+									<p>这是产品名称</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="img">
+										<img src="images/pro3.png" alt="">
+									</div>
+									<p>这是产品名称</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="img">
+										<img src="images/pro3.png" alt="">
+									</div>
+									<p>这是产品名称</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="img">
+										<img src="images/pro3.png" alt="">
+									</div>
+									<p>这是产品名称</p>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="pro-right">
+						<ul>
+							<li>
+								<a href="#">
+									<div class="img">
+										<img src="images/pro4.png" alt="">
+									</div>
+									<p>这是产品名称</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="img">
+										<img src="images/pro4.png" alt="">
+									</div>
+									<p>这是产品名称</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="img">
+										<img src="images/pro4.png" alt="">
+									</div>
+									<p>这是产品名称</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="img">
+										<img src="images/pro4.png" alt="">
+									</div>
+									<p>这是产品名称</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="img">
+										<img src="images/pro4.png" alt="">
+									</div>
+									<p>这是产品名称</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="img">
+										<img src="images/pro4.png" alt="">
+									</div>
+									<p>这是产品名称</p>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="pro-right">
+						<ul>
+							<li>
+								<a href="#">
+									<div class="img">
+										<img src="images/pro5.png" alt="">
+									</div>
+									<p>这是产品名称</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="img">
+										<img src="images/pro5.png" alt="">
+									</div>
+									<p>这是产品名称</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="img">
+										<img src="images/pro5.png" alt="">
+									</div>
+									<p>这是产品名称</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="img">
+										<img src="images/pro5.png" alt="">
+									</div>
+									<p>这是产品名称</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="img">
+										<img src="images/pro5.png" alt="">
+									</div>
+									<p>这是产品名称</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="img">
+										<img src="images/pro5.png" alt="">
+									</div>
+									<p>这是产品名称</p>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="pro-right">
+						<ul>
+							<li>
+								<a href="#">
+									<div class="img">
+										<img src="images/pro6.png" alt="">
+									</div>
+									<p>这是产品名称</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="img">
+										<img src="images/pro6.png" alt="">
+									</div>
+									<p>这是产品名称</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="img">
+										<img src="images/pro6.png" alt="">
+									</div>
+									<p>这是产品名称</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="img">
+										<img src="images/pro6.png" alt="">
+									</div>
+									<p>这是产品名称</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="img">
+										<img src="images/pro6.png" alt="">
+									</div>
+									<p>这是产品名称</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="img">
+										<img src="images/pro6.png" alt="">
+									</div>
+									<p>这是产品名称</p>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
 		<a href="javascript:;" style="display:none;"></a>
 	</body>
 	  
@@ -132,27 +401,7 @@
     <p>版权所有 © 2024 ANGANG (ASIA-PACIFIC) TECHNOLOGY PTE. LTD.</p>
   </footer>
 
-  <script>
-document.querySelectorAll('.left-category ul li.category').forEach(category => {
-    category.addEventListener('click', function() {
-        const selectedCategory = this.getAttribute('data-category');
-
-        // Hide all product sections
-        document.querySelectorAll('.pro-right > div').forEach(div => {
-            div.style.display = 'none';
-        });
-
-        // Show the selected category
-        const activeCategory = document.querySelector(`.${selectedCategory}`);
-        if (activeCategory) {
-            activeCategory.style.display = 'block';
-        }
-    });
-});
-
-// Initialize to show the first category by default
-document.querySelector('.left-category ul li.category').click();
-	  
+  <script>	  
     function switchLanguage(language) {
         if (language === 'cn') {
             // Logic to switch to Chinese version
