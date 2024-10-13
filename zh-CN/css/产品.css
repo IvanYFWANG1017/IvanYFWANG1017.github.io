@@ -7,14 +7,35 @@
     .pro-center .sub-title { font-size: 20px; text-align: center; color: #333333; }
     .pro-left { float: left; width: 240px; box-sizing: border-box; box-shadow: 0px 10px 10px #f7f7f7; }
     .pro-content { width: 100%; padding-top: 40px; margin-left: 260px; }
-    .pro-right { float: right; width: 940px; }
+.pro-right {
+    width: 940px;
+    margin-left: 260px; /* Space for fixed left category */
+    float: right;
+}
     .pro-left .left-title { background: #317fff; height: 110px; line-height: 110px; text-align: center; }
     .pro-left .left-title span { display: inline-block; color: #FFFFFF; font-size: 24px; font-weight: bold; }
-    .pro-left .left-category ul li { height: 60px; line-height: 60px; font-size: 20px; text-align: center; cursor: pointer; color: #999999; }
-    .pro-left .left-category ul li.on { background: #087fd2; color: #FFFFFF; }
-    .pro-left .left-category ul li:hover { background: #087fd2; color: #FFFFFF; }
-    .pro-right { display: none; } /* Initially hide product sections */
-    .pro-right.active { display: block; } /* Show active product section */
+
+.pro-left .left-category ul li {
+    cursor: pointer;
+    color: #999999;
+    background: #f7f7f7;
+}
+
+.pro-left .left-category ul li.on {
+    background: #087fd2;
+    color: #FFFFFF;
+}
+
+.pro-left .left-category ul li:hover { background: #087fd2; color: #FFFFFF; }
+
+.products {
+    display: none; /* Hide all product sections by default */
+}
+
+.products.active {
+    display: block; /* Show active product section */
+}
+
 
 /* 鼠标图片悬停显示文字 */
 .pro-right li {
