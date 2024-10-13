@@ -395,36 +395,43 @@
 		<a href="javascript:;" style="display:none;"></a>
 	</body>
 
+        <div class="slider-controls">
+            <button id="prevBtn">上一页</button>
+            <button id="nextBtn">下一页</button>
+        </div>
+	  
   </main>
   <footer>
     <p>版权所有 © 2024 ANGANG (ASIA-PACIFIC) TECHNOLOGY PTE. LTD.</p>
   </footer>
 
   <script>
-// JavaScript for switching categories
-function switchCategory(pageIndex) {
-    // Hide all categories
-    document.querySelectorAll('.pro-right').forEach((element, index) => {
-        element.classList.remove('active');
-    });
+        // JavaScript for slider functionality
+        let currentIndex = 0;
 
-    // Show the selected category
-    document.querySelectorAll('.pro-right')[pageIndex].classList.add('active');
+        function showCategory(index) {
+            const categories = document.querySelectorAll('.pro-right');
+            const totalCategories = categories.length;
 
-    // Update pagination buttons
-    document.querySelectorAll('.pagination a').forEach((btn, index) => {
-        if (index === pageIndex) {
-            btn.classList.add('active');
-        } else {
-            btn.classList.remove('active');
+            currentIndex = (index + totalCategories) % totalCategories; // Loop back if needed
+
+            categories.forEach((category, idx) => {
+                category.style.transform = `translateX(${(idx - currentIndex) * 100}%)`;
+            });
         }
-    });
-}
 
-// Ensure the first category is visible by default
-document.addEventListener('DOMContentLoaded', function () {
-    switchCategory(0);
-});
+        document.getElementById('prevBtn').addEventListener('click', () => {
+            showCategory(currentIndex - 1);
+        });
+
+        document.getElementById('nextBtn').addEventListener('click', () => {
+            showCategory(currentIndex + 1);
+        });
+
+        // Initialize the slider to show the first category
+        document.addEventListener('DOMContentLoaded', () => {
+            showCategory(currentIndex);
+        });
 	  
     function switchLanguage(language) {
         if (language === 'cn') {
