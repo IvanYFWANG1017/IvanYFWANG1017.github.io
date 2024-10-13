@@ -141,6 +141,67 @@ section h2 {
   margin-top: 0;
 }
 
+/* Style for product hover effect */
+.pro-right li a {
+    position: relative;
+    display: block;
+}
+
+.pro-right li .img {
+    transition: opacity 0.3s ease;
+}
+
+.pro-right li p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    text-align: center;
+    width: 100%;
+    transition: opacity 0.3s ease;
+    color: #333;
+    background: rgba(255, 255, 255, 0.8); /* Add background to text for better readability */
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.pro-right li:hover .img {
+    opacity: 0; /* Hide image on hover */
+}
+
+.pro-right li:hover p {
+    opacity: 1; /* Show text on hover */
+}
+
+/* Style for product category pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination a {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 0 5px;
+    background-color: #ccc;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.pagination a:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.pagination a.active {
+    background-color: #007bff;
+    color: #fff;
+}
+
 /* 页脚样式 */
 footer {
   background-color: #2c3e50;
