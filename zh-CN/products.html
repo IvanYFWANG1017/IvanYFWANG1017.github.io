@@ -385,45 +385,13 @@
 		</div>
 		<a href="javascript:;" style="display:none;"></a>
 	</body>
-
-        <div class="slider-controls">
-            <button id="prevBtn">上一页</button>
-            <button id="nextBtn">下一页</button>
-        </div>
 	  
   </main>
   <footer>
     <p>版权所有 © 2024 ANGANG (ASIA-PACIFIC) TECHNOLOGY PTE. LTD.</p>
   </footer>
 
-  <script>
-        // JavaScript for slider functionality
-        let currentIndex = 0;
-
-        function showCategory(index) {
-            const categories = document.querySelectorAll('.pro-right');
-            const totalCategories = categories.length;
-
-            currentIndex = (index + totalCategories) % totalCategories; // Loop back if needed
-
-            categories.forEach((category, idx) => {
-                category.style.transform = `translateX(${(idx - currentIndex) * 100}%)`;
-            });
-        }
-
-        document.getElementById('prevBtn').addEventListener('click', () => {
-            showCategory(currentIndex - 1);
-        });
-
-        document.getElementById('nextBtn').addEventListener('click', () => {
-            showCategory(currentIndex + 1);
-        });
-
-        // Initialize the slider to show the first category
-        document.addEventListener('DOMContentLoaded', () => {
-            showCategory(currentIndex);
-        });
-	  
+  <script>	  
     function switchLanguage(language) {
         if (language === 'cn') {
             // Logic to switch to Chinese version
