@@ -152,7 +152,7 @@ body {
 
 .pro-right ul li img {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
     transition: opacity 0.3s ease;
 }
@@ -182,13 +182,13 @@ body {
     text-align: center;
     color: #333;
     background: rgba(255, 255, 255, 0.8);
-    padding: 15px;
-    border-radius: 5px;
-    transition: opacity 0.3s ease;
+    padding: 20px;
+    border-radius: 8px;
+    transition: opacity 0.3s ease, width 0.3s ease, height 0.3s ease; /* Smooth transition for text visibility and size */
     z-index: 10;
     white-space: normal;
-    width: 90%;
-    max-height: 100px;
+    width: 80%;
+    max-height: 150px;
     overflow: auto;
 }
 
