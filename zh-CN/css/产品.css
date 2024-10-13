@@ -176,7 +176,7 @@ body {
     width: 90%; /* Cover the entire width */
     height: 90%; /* Cover the entire height */
     display: flex; /* Use flex to center the text */
-    align-items: center; /* Center vertically */
+    align-items: flex-start; /* Align text at the top */
     justify-content: center; /* Center horizontally */
     opacity: 0; /* Initially hide the text */
     text-align: center;
