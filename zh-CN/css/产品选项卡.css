@@ -52,9 +52,10 @@
     text-align: center;
     color: #333;
     background: rgba(255, 255, 255, 0.8); /* Background for text visibility */
-    padding: 5px;
+    padding: 10px;
     border-radius: 5px;
     transition: opacity 0.3s ease; /* Smooth transition for text visibility */
+    z-index: 10; /* Ensure it is above the image */
 }
 
 .pro-right li:hover img {
