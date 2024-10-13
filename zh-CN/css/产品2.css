@@ -182,12 +182,12 @@ body {
     text-align: center;
     color: #333;
     background: rgba(255, 255, 255, 0.8);
-    padding: 200px;
-    border-radius: 8px;
+    padding: 20px;
+    border-radius: 200px;
     transition: opacity 0.3s ease, width 0.3s ease, height 0.3s ease; /* Smooth transition for text visibility and size */
     z-index: 10;
     white-space: normal;
-    width: 80%;
+    width: 90%;
     max-height: 200px;
     overflow: auto;
 }
