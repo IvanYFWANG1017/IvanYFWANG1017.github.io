@@ -39,6 +39,7 @@
         <h2>导航</h2>
         <a href="#" onclick="showSection('company-intro')">公司简介</a>
         <a href="#" onclick="showSection('certificate')">授权书</a>
+        <a href="#" onclick="showSection('video-display')">视频展示</a>
     </aside>
 
     <main>
@@ -67,6 +68,7 @@
             <div class="certificate-images">
                 <a href="险峰-合格经销商授权书.pdf" download="险峰-合格经销商授权书.pdf">
                     <img src="险峰授权中文.png" alt="险峰授权中文">
+                </a>
             </div>
         </section>
     </main>
@@ -76,13 +78,31 @@
 </footer>
 
 <script>
-    function showSection(sectionId) {
-        // Hide all sections
-        document.querySelectorAll('main section').forEach(section => section.classList.remove('active'));
+// Function to show the selected section
+function showSection(sectionId) {
+    // Hide all sections
+    document.querySelectorAll('main section').forEach(section => {
+        section.style.display = 'none'; // Hide all sections
+        section.classList.remove('active');
+    });
 
-        // Show the selected section
-        document.getElementById(sectionId).classList.add('active');
+    // Show the selected section
+    const selectedSection = document.getElementById(sectionId);
+    if (selectedSection) {
+        selectedSection.style.display = 'block'; // Show only the clicked section
+        selectedSection.classList.add('active');
+        localStorage.setItem('activeSection', sectionId); // Store the active section in localStorage
     }
+}
+
+// Function to initialize the active section based on localStorage or default to 'company-intro'
+function initActiveSection() {
+    const activeSection = localStorage.getItem('activeSection') || 'company-intro';
+    showSection(activeSection);
+}
+
+// Initialize the active section when the page loads
+document.addEventListener('DOMContentLoaded', initActiveSection);
 
     function switchLanguage(language) {
         if (language === 'cn') {

@@ -39,6 +39,7 @@
         <h2>导航</h2>
         <a href="#" onclick="showSection('company-intro')">公司简介</a>
         <a href="#" onclick="showSection('certificate')">授权书</a>
+        <a href="#" onclick="showSection('video-display')">视频展示</a>
     </aside>
 
     <main>
@@ -56,8 +57,15 @@
             <div class="certificate-images">
                 <a href="LISMAR Qualified Agent Authorization.pdf" download="LISMAR Qualified Agent Authorization.pdf">
                     <img src="LISMAR授权英文.png" alt="LISMAR授权英文">
+                </a>
             </div>
         </section>
+
+        <section id="video-display" class="video-display">
+            <h2>视频展示</h2>
+                <iframe title="LISMAR Roll Inspection Technology" width="570" height="321" src="https://www.youtube.com/embed/Qx7lverIKZQ?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> <!-- Example video -->
+        </section>
+        
     </main>
 </div>
 <footer>
@@ -65,13 +73,31 @@
 </footer>
 
 <script>
-    function showSection(sectionId) {
-        // Hide all sections
-        document.querySelectorAll('main section').forEach(section => section.classList.remove('active'));
+// Function to show the selected section
+function showSection(sectionId) {
+    // Hide all sections
+    document.querySelectorAll('main section').forEach(section => {
+        section.style.display = 'none'; // Hide all sections
+        section.classList.remove('active');
+    });
 
-        // Show the selected section
-        document.getElementById(sectionId).classList.add('active');
+    // Show the selected section
+    const selectedSection = document.getElementById(sectionId);
+    if (selectedSection) {
+        selectedSection.style.display = 'block'; // Show only the clicked section
+        selectedSection.classList.add('active');
+        localStorage.setItem('activeSection', sectionId); // Store the active section in localStorage
     }
+}
+
+// Function to initialize the active section based on localStorage or default to 'company-intro'
+function initActiveSection() {
+    const activeSection = localStorage.getItem('activeSection') || 'company-intro';
+    showSection(activeSection);
+}
+
+// Initialize the active section when the page loads
+document.addEventListener('DOMContentLoaded', initActiveSection);
 
     function switchLanguage(language) {
         if (language === 'cn') {

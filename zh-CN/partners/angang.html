@@ -74,9 +74,9 @@
 
         <section id="video-display" class="video-display">
             <h2>视频展示</h2>
-            <video controls>
+            <video controls class="responsive-video">
                 <source src="鞍钢.mp4" type="video/mp4">
-                Your browser does not support the video tag.
+                Your browser does not support the video tag. Please download the video using the link below.
             </video>
         </section>
         
@@ -87,13 +87,31 @@
 </footer>
 
 <script>
-    function showSection(sectionId) {
-        // Hide all sections
-        document.querySelectorAll('main section').forEach(section => section.classList.remove('active'));
+// Function to show the selected section
+function showSection(sectionId) {
+    // Hide all sections
+    document.querySelectorAll('main section').forEach(section => {
+        section.style.display = 'none'; // Hide all sections
+        section.classList.remove('active');
+    });
 
-        // Show the selected section
-        document.getElementById(sectionId).classList.add('active');
+    // Show the selected section
+    const selectedSection = document.getElementById(sectionId);
+    if (selectedSection) {
+        selectedSection.style.display = 'block'; // Show only the clicked section
+        selectedSection.classList.add('active');
+        localStorage.setItem('activeSection', sectionId); // Store the active section in localStorage
     }
+}
+
+// Function to initialize the active section based on localStorage or default to 'company-intro'
+function initActiveSection() {
+    const activeSection = localStorage.getItem('activeSection') || 'company-intro';
+    showSection(activeSection);
+}
+
+// Initialize the active section when the page loads
+document.addEventListener('DOMContentLoaded', initActiveSection);
 
     function switchLanguage(language) {
         if (language === 'cn') {
