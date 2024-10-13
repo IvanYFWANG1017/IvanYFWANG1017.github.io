@@ -31,14 +31,18 @@
 /*鼠标图片悬停显示文字*/
 .pro-right li {
     position: relative; /* Make sure positioning is relative */
+    width: 200px; /* Optional: Set a fixed width for each product item */
 }
 
 .pro-right .img {
     position: relative; /* Allow positioning of children */
     display: inline-block; /* Make sure the container fits the content */
+    overflow: hidden; /* Ensure text does not overflow */    
 }
 
 .pro-right img {
+    width: 100%; /* Make the image fill the width of its container */
+    height: 100%; /* Maintain the aspect ratio */
     display: block; /* Ensures that images don't have extra space below */
     transition: opacity 0.3s ease; /* Smooth transition for opacity */
 }
