@@ -1,63 +1,150 @@
-a
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Company website</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/jquery.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANGANG (ASIA-PACIFIC) TECHNOLOGY PTE. LTD. - 首页</title>
+    <link rel="stylesheet" href="css/posterTvGrid.css">
+    <link rel="stylesheet" href="css/style1.css">
+    <style>
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        .intro, .about {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .intro h1, .about h2 {
+            text-align: center;
+            color: #317fff;
+        }
+        .link-section {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        .link-section a {
+            width: 30%;
+            margin: 10px;
+            text-align: center;
+            text-decoration: none;
+            color: #333;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .link-section a img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .link-section a:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+        .link-section p {
+            background-color: #ffffff;
+            padding: 15px;
+            font-size: 18px;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>ANGANG (ASIA-PACIFIC) TECHNOLOGY PTE. LTD.</h1>
-  </header>
-  <nav>
-    <a href="index.html">
-      <span id="lang-home">Home</span>
-    </a>
-    <a href="about.html">
-      <span id="about-text">About</span>
-    </a>
-    <a href="products.html">
-      <span id="products-text">Products</span>
-    </a>
-    <a href="contact.html">
-      <span id="contact-text">Contact</span>
-    </a>
-    <button id="lang-switch-CN">
-      <a href="https://ivanyfwang1017.github.io/zh-CN/index.html">
-        <span id="lang-text">中文</span>
-      </a>
-    </button>
-    <button id="lang-switch-US">
-      <a href="index.html">
-        <span id="lang-text">Eng</span>
-      </a>
-    </button>
-  </nav>
-  <main>
-    <section>
-      <h2>Company Introduction</h2>
-      <p>ANGANG (ASIA-PACIFIC) TECHNOLOGY PTE. LTD. was established in September 2021 and is an experienced and innovative professional integrated management company for grinding rolls. Our main business focuses on collaborating with steel companies in the Asia Pacific region, including collaboration with companies such as Yieh United Steel Corporation, Ltd. and YIEH PHUI ENTERPRISE CO., LTD. based on Taiwan.</p>
-    </section>
-    <section>
-      <h2>Products</h2>
-      <ul>
-        <li>Roller</li>
-        <li>Grinder</li>
-        <li>Roll Grinding Workshop Management System</li>
-      </ul>
-    </section>
-    <section>
-      <h2>Contact</h2>
-      <p>Tel：+65 81327582</p>
-      <p>Email：angang-asia@outlook.com</p>
-      <p>Address：3 TEMASEK AVENUE, #27-02, CENTENNIAL TOWER, SINGAPORE (039190)</p>
-    </section>
-  </main>
-  <footer>
-    <p>© 2024 ANGANG (ASIA-PACIFIC) TECHNOLOGY PTE. LTD.</p>
-  </footer>
+    <header>
+        <h1>ANGANG (ASIA-PACIFIC) TECHNOLOGY PTE. LTD.</h1>
+        <p>磨辊间专业整合管理专家
+	<br>特冶熔炼产品解决供应商
+	</p>
+	<div class="language-dropdown">
+        <a href="#">选择语言</a>
+        <div class="dropdown-content">
+            <a href="#" onclick="switchLanguage('cn')">中文</a>
+            <a href="#" onclick="switchLanguage('en')">English</a>
+        </div>
+    </div>
+    </header>
+
+    <nav>
+        <a href="index.html">首页</a>
+        <a href="products.html">产品和服务</a>
+    <div class="dropdown">
+        <a href="partners.html">合作伙伴</a>
+        <div class="dropdown-content">
+            <a href="https://ivanyfwang1017.github.io/zh-CN/partners/angang.html">鞍钢</a>
+            <a href="https://ivanyfwang1017.github.io/zh-CN/partners/xianfeng.html">险峰</a>
+            <a href="https://ivanyfwang1017.github.io/zh-CN/partners/lismar.html">LISMAR</a>
+            <a href="https://ivanyfwang1017.github.io/zh-CN/partners/shuori.html">烁日</a>
+        </div>
+    </div>
+        <a href="contact.html">联系我们</a>
+    </nav>
+    
+    <div class="container">
+        <section class="intro">
+            <h1>欢迎来到 ANGANG (ASIA-PACIFIC) TECHNOLOGY PTE. LTD.</h1>
+            <p><b>公司概述：</b>
+                <br>ANGANG (ASIA-PACIFIC) TECHNOLOGY PTE. LTD. 是一家注册于新加坡的公司，成立于2021年。公司的使命是通过提供高质量的冶金轧辊、大型工业磨床、特冶熔炼设备以及钢铁厂常用的备件，服务亚太地区的钢铁公司。
+                <br><br><b>行业经验：</b>
+                <br>创始人之一王先生自1997年进入钢铁行业，1997-2006年在韩国的POSCO工作，积累了丰富的经验，结合各钢厂的需求，已在中国创立了多家公司，并已服务多年，口碑优良。目前已与鞍钢重型机械有限责任公司、鞍钢轧辊有限公司、贵阳险峰机床有限责任公司建立了良好战略合作关系；另，沙钢集团、POSCO，BlueScope（博思格中国、博思格越南），YUSCO（烨联、烨辉集团），鞍钢广州联众等公司是中国总公司及我司的主要客户。
+                <br><br><b>合作伙伴关系与代理权：</b>
+                <br>ANGANG (ASIA-PACIFIC) TECHNOLOGY PTE. LTD. 拥有中国鞍钢轧辊有限公司、贵阳险峰机床有限责任公司、荷兰LISMAR公司和苏州烁日科技有限公司的设备代理权，长期目标是扩大服务范围，以满足钢铁行业不断变化的需求。
+            </p>
+        </section>
+
+    <div id="posterTvGrid86804" style="margin:40px auto 0 auto;"></div>
+		<script type="text/javascript" src="js/jquery.js"></script> 
+		<script type="text/javascript" src="js/posterTvGrid.js"></script> 
+		<script type="text/javascript">
+		var posterTvGrid86804 = new posterTvGrid('posterTvGrid86804',{className: "posterTvGrid"},[
+				{"img":"images\/图片1.png"},
+				{"img":"images\/图片2.png"},
+				{"img":"images\/图片3.png"},
+				{"img":"images\/图片4.png"},
+				{"img":"images\/图片5.png"},
+			]
+		);
+		</script>
+	    
+        <section class="link-section">
+            <a href="products.html">
+                <img src="images/products.png" alt="产品和服务">
+                <p>产品和服务</p>
+            </a>
+            <a href="partners.html">
+                <img src="images/partners.png" alt="合作伙伴">
+                <p>合作伙伴</p>
+            </a>
+            <a href="contact.html">
+                <img src="images/contact.png" alt="联系我们">
+                <p>联系我们</p>
+            </a>
+        </section>
+    </div>
+
+    <footer>
+        <p>版权所有 © 2024 ANGANG (ASIA-PACIFIC) TECHNOLOGY PTE. LTD.</p>
+    </footer>
+
+  <script>
+    function switchLanguage(language) {
+        if (language === 'cn') {
+            // Logic to switch to Chinese version
+            alert("切换到中文"); // Placeholder for actual implementation
+            window.location.href = "index.html"
+        } else if (language === 'en') {
+            // Logic to switch to English version
+            alert("Switching to English"); // Placeholder for actual implementation
+            window.location.href = "https://ivanyfwang1017.github.io/en-US/index.html"
+        }
+    }
+  </script>
+	
 </body>
 </html>

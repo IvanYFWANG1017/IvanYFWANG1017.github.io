@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANGANG (ASIA-PACIFIC) TECHNOLOGY PTE. LTD. - 首页</title>
+    <link rel="stylesheet" href="css/posterTvGrid.css">
+    <link rel="stylesheet" href="css/style1.css">
+    <style>
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        .intro, .about {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .intro h1, .about h2 {
+            text-align: center;
+            color: #317fff;
+        }
+        .link-section {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        .link-section a {
+            width: 30%;
+            margin: 10px;
+            text-align: center;
+            text-decoration: none;
+            color: #333;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .link-section a img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .link-section a:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+        .link-section p {
+            background-color: #ffffff;
+            padding: 15px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ANGANG (ASIA-PACIFIC) TECHNOLOGY PTE. LTD.</h1>
+        <p>致力于磨辊间专业整合管理的创新企业</p>
+	<div class="language-dropdown">
+        <a href="#">选择语言</a>
+        <div class="dropdown-content">
+            <a href="#" onclick="switchLanguage('cn')">中文</a>
+            <a href="#" onclick="switchLanguage('en')">English</a>
+        </div>
+    </div>
+    </header>
+
+    <nav>
+        <a href="index.html">首页</a>
+        <a href="about.html">关于我们</a>
+        <a href="products.html">产品和服务</a>
+        <a href="partners.html">合作伙伴</a>
+        <a href="contact.html">联系我们</a>
+    </nav>
+
+    <div id="posterTvGrid86804" style="margin:40px auto 0 auto;"></div>
+		<script type="text/javascript" src="js/jquery.js"></script> 
+		<script type="text/javascript" src="js/posterTvGrid.js"></script> 
+		<script type="text/javascript">
+		var posterTvGrid86804 = new posterTvGrid('posterTvGrid86804',{className: "posterTvGrid"},[
+				{"img":"images\/图片1.png"},
+				{"img":"images\/图片2.png"},
+				{"img":"images\/图片3.png"},
+				{"img":"images\/图片4.png"},
+				{"img":"images\/图片5.png"},
+			]
+		);
+		</script>
+    
+    <div class="container">
+        <section class="intro">
+            <h1>欢迎来到 ANGANG (ASIA-PACIFIC) TECHNOLOGY PTE. LTD.</h1>
+            <p><b>公司概述：</b>
+                <br>ANGANG (ASIA-PACIFIC) TECHNOLOGY PTE. LTD. 是一家注册于新加坡的公司，成立于2021年。公司的使命是通过提供高质量的磨辊、磨床、低温合金设备以及钢铁厂常用的备件，支持亚太地区的钢铁公司。
+                <br><br><b>行业经验：</b>
+                <br>创始人之一王卫东自1997年进入钢铁行业，1997-2006年在韩国的POSCO工作，积累了丰富的经验，并在中国创立了多家公司。这些公司主要向鞍钢集团、沙钢集团、台湾烨联集团和烨辉集团等客户提供轧辊、磨床、低温合金设备、钢厂常用备件、磨辊间智能管理整合系统及改造服务。
+                <br><br><b>合作伙伴关系与代理权：</b>
+                <br>ANGANG (ASIA-PACIFIC) TECHNOLOGY PTE.有限公司拥有中国鞍钢集团、贵阳险峰公司、荷兰LISMAR公司和苏州烁日科技有限公司的设备代理权，长期目标是扩大服务范围，以满足钢铁行业不断变化的需求。
+            </p>
+        </section>
+
+        <section class="link-section">
+            <a href="products.html">
+                <img src="images/products.jpg" alt="产品和服务">
+                <p>产品和服务</p>
+            </a>
+            <a href="partners.html">
+                <img src="images/partners.jpg" alt="合作伙伴">
+                <p>合作伙伴</p>
+            </a>
+            <a href="contact.html">
+                <img src="images/contact.jpg" alt="联系我们">
+                <p>联系我们</p>
+            </a>
+        </section>
+    </div>
+
+    <footer>
+        <p>版权所有 © 2024 ANGANG (ASIA-PACIFIC) TECHNOLOGY PTE. LTD.</p>
+    </footer>
+
+  <script>
+    function switchLanguage(language) {
+        if (language === 'cn') {
+            // Logic to switch to Chinese version
+            alert("切换到中文"); // Placeholder for actual implementation
+            window.location.href = "about.html"
+        } else if (language === 'en') {
+            // Logic to switch to English version
+            alert("Switching to English"); // Placeholder for actual implementation
+            window.location.href = "https://ivanyfwang1017.github.io/en-US/about.html"
+        }
+    }
+  </script>
+	
+</body>
+</html>
