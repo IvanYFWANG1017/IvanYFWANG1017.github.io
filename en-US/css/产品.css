@@ -82,6 +82,11 @@ body {
     border-radius: 8px 8px 0 0; /* Round top corners */
 }
 
+.pro-left .left-title span {
+    display: inline-block; /* Ensure elements are inline */
+    margin: 0 10px; /* Add margin for spacing between elements */
+}
+
 .pro-left .left-category ul {
     padding: 10px 0;
     margin: 0; /* Remove default margin */
