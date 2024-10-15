@@ -73,8 +73,8 @@ body {
 
 .pro-left .left-title {
     background: #317fff;
-    height: 110px;
-    line-height: 110px;
+    height: auto;
+    padding: 20px;
     text-align: center;
     color: #ffffff;
     font-size: 24px;
