@@ -141,23 +141,6 @@ section h2 {
   margin-top: 0;
 }
 
-/* General Text Styling */
-.text {
-    font-size: 16px;          /* 设置字体大小 */
-    line-height: 1.6;         /* 增加行间距，提升可读性 */
-    color: #333;              /* 深色字体，确保对比度 */
-    column-count: 1;          /* 确保文本只显示在一列 */
-    column-gap: 0;            /* 移除列间距，确保没有分列 */
-    padding: 10px;            /* 添加内边距，防止文本过于贴近边缘 */
-    text-align: justify;      /* 对齐文本两端，使段落更整齐 */
-}
-
-/* Styling for Subscript */
-.text sub {
-    font-size: 0.8em;         /* 设置下标字体大小，确保可读性 */
-    vertical-align: sub;      /* 垂直对齐，使下标位置正确 */
-}
-
 /* Contact Section Styles */
 .contact-section {
     background-color: #ffffff;
