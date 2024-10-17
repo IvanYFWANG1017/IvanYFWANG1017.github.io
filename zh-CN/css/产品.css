@@ -63,17 +63,18 @@ body {
     background: #ffffff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    overflow: hidden;
+    overflow-y: auto; /* Enable vertical scrolling */
     margin-right: 20px;
     padding-bottom: 20px;
     position: sticky;
     top: 20px; /* Make it sticky for better navigation */
+    height: calc(100vh - 40px); /* Set height based on viewport */
 }
 
 .pro-left .left-title {
     background: #317fff;
-    height: 110px;
-    line-height: 110px;
+    height: auto;
+    padding: 20px;
     text-align: center;
     color: #ffffff;
     font-size: 24px;
@@ -81,12 +82,18 @@ body {
     border-radius: 8px 8px 0 0; /* Round top corners */
 }
 
+.pro-left .left-title span {
+    display: inline-block; /* Ensure elements are inline */
+    margin: 0 10px; /* Add margin for spacing between elements */
+}
+
 .pro-left .left-category ul {
     padding: 10px 0;
+    margin: 0; /* Remove default margin */
 }
 
 .pro-left .left-category ul li {
-    height: 50px;
+    height: auto;
     line-height: 50px;
     font-size: 18px;
     text-align: center;
@@ -94,6 +101,7 @@ body {
     color: #666;
     transition: background 0.3s ease, color 0.3s ease; /* Smooth transition */
     border-bottom: 1px solid #eaeaea;
+    padding: 10px 0; /* Add padding for better spacing */
 }
 
 .pro-left .left-category ul li.on,
@@ -175,6 +183,7 @@ body {
     left: 10%; /* Start from the left */
     width: 90%; /* Cover the entire width */
     height: 90%; /* Cover the entire height */
+    display: flex; /* Use flex to center the text */
     align-items: flex-start; /* Align text at the top */
     justify-content: center; /* Center horizontally */
     opacity: 0; /* Initially hide the text */
@@ -186,14 +195,6 @@ body {
     z-index: 10; /* Ensure it is above the image */
     white-space: normal; /* Allow text to wrap */
     overflow: auto; /* Allow scrolling if text exceeds the height */
-    column-count: 1;          /* 确保文本只显示在一列 */
-    column-gap: 0;            /* 移除列间距，确保没有分列 */
-}
-
-/* Styling for Subscript */
-.pro-right .text sub {
-    font-size: 0.8em;         /* 设置下标字体大小，确保可读性 */
-    vertical-align: sub;      /* 垂直对齐，使下标位置正确 */
 }
 
 .pro-right li:hover img {
