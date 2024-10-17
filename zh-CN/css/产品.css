@@ -187,6 +187,7 @@ body {
     z-index: 10; /* Ensure it is above the image */
     white-space: normal; /* Allow text to wrap */
     overflow: auto; /* Allow scrolling if text exceeds the height */
+    column-count: 1;          /* 确保文本只显示在一列 */
 }
 
 .pro-right li:hover img {
