@@ -188,6 +188,13 @@ body {
     white-space: normal; /* Allow text to wrap */
     overflow: auto; /* Allow scrolling if text exceeds the height */
     column-count: 1;          /* 确保文本只显示在一列 */
+    column-gap: 0;            /* 移除列间距，确保没有分列 */
+}
+
+/* Styling for Subscript */
+.pro-right .text sub {
+    font-size: 0.8em;         /* 设置下标字体大小，确保可读性 */
+    vertical-align: sub;      /* 垂直对齐，使下标位置正确 */
 }
 
 .pro-right li:hover img {
