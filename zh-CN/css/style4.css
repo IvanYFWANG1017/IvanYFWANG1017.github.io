@@ -185,7 +185,7 @@ section.active {
 }
 
 .flex-three li {
-    flex: 0 0 30%; /* 每个 <li> 占据容器的 30% */
+    flex: 0 0 20%; /* 每个 <li> 占据容器的 30% */
     margin-bottom: 20px; /* 下方间距 */
     padding: 10px;
     border-radius: 5px;
