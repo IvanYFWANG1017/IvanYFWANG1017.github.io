@@ -175,18 +175,15 @@ section.active {
   display: block; /* Show when active */
 }
 
-.flex-list {
-    display: flex; /* 激活 Flexbox */
-    justify-content: center; /* 水平居中对齐 */
+.inline-list {
     padding: 0;
     margin: 0;
-    list-style: none; /* 去掉默认的列表样式 */
-    gap: 15px; /* 设置间距 */
 }
 
-.flex-list li {
+.inline-list li {
+    display: inline-block;
+    margin: 0 10px; /* 设置左右间距 */
     padding: 5px 10px;
-    background-color: #f0f0f0;
     border-radius: 5px;
 }
         
