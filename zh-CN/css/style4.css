@@ -175,9 +175,6 @@ section.active {
   display: block; /* Show when active */
 }
 
-ul {
-  list-style-type: none;
-}
 li {
   display: inline-block;
   margin-right: 10px;
