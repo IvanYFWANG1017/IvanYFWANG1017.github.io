@@ -181,7 +181,7 @@ section.active {
     justify-content: space-between; /* 均匀分布 */
     padding: 0;
     margin: 0;
-    list-style: none;
+    list-style: circle;
 }
 
 .flex-three li {
