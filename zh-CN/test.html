@@ -3,139 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ANGANG (ASIA-PACIFIC) TECHNOLOGY PTE. LTD. - 首页</title>
-    <link rel="stylesheet" href="css/posterTvGrid.css">
-    <link rel="stylesheet" href="css/style1.css">
-    <style>
-        .container {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 0 20px;
-        }
-        .intro, .about {
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-        }
-        .intro h1, .about h2 {
-            text-align: center;
-            color: #317fff;
-        }
-        .link-section {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 30px;
-            flex-wrap: wrap;
-        }
-        .link-section a {
-            width: 30%;
-            margin: 10px;
-            text-align: center;
-            text-decoration: none;
-            color: #333;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .link-section a img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        .link-section a:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-        }
-        .link-section p {
-            background-color: #ffffff;
-            padding: 15px;
-            font-size: 18px;
-        }
-    </style>
+    <title>ANGANG (ASIA-PACIFIC) TECHNOLOGY PTE. LTD.</title>
+    <link rel="stylesheet" href="css/style3.css">
+    <script src="js/jquery.js"></script>
 </head>
 <body>
-    <header>
-        <h1>ANGANG (ASIA-PACIFIC) TECHNOLOGY PTE. LTD.</h1>
-        <p>致力于磨辊间专业整合管理的创新企业</p>
-	<div class="language-dropdown">
+
+<header>
+    <h1>ANGANG (ASIA-PACIFIC) TECHNOLOGY PTE. LTD.</h1>
+    <div class="language-dropdown">
         <a href="#">选择语言</a>
         <div class="dropdown-content">
             <a href="#" onclick="switchLanguage('cn')">中文</a>
             <a href="#" onclick="switchLanguage('en')">English</a>
         </div>
     </div>
-    </header>
+</header>
 
     <nav>
-        <a href="index.html">首页</a>
-        <a href="about.html">关于我们</a>
-        <a href="products.html">产品和服务</a>
-        <a href="partners.html">合作伙伴</a>
-        <a href="contact.html">联系我们</a>
+        <a href="index">首页</a>
+        <a href="products">产品与服务</a>
+        <div class="dropdown">
+            <a href="partners">合作伙伴</a>
+            <div class="dropdown-content">
+                <a href="https://ivanyfwang1017.github.io/zh-CN/partners/angang">鞍钢轧辊有限公司</a>
+                <a href="https://ivanyfwang1017.github.io/zh-CN/partners/xianfeng">贵阳险峰机床有限责任公司</a>
+                <a href="https://ivanyfwang1017.github.io/zh-CN/partners/lismar">LISMAR</a>
+                <a href="https://ivanyfwang1017.github.io/zh-CN/partners/shuori">苏州烁日科技有限公司</a>
+            </div>
+        </div>
+        <a href="contact">联系我们</a>
     </nav>
 
-    <div id="posterTvGrid86804" style="margin:40px auto 0 auto;"></div>
-		<script type="text/javascript" src="js/jquery.js"></script> 
-		<script type="text/javascript" src="js/posterTvGrid.js"></script> 
-		<script type="text/javascript">
-		var posterTvGrid86804 = new posterTvGrid('posterTvGrid86804',{className: "posterTvGrid"},[
-				{"img":"images\/图片1.png"},
-				{"img":"images\/图片2.png"},
-				{"img":"images\/图片3.png"},
-				{"img":"images\/图片4.png"},
-				{"img":"images\/图片5.png"},
-			]
-		);
-		</script>
-    
-    <div class="container">
-        <section class="intro">
-            <h1>欢迎来到 ANGANG (ASIA-PACIFIC) TECHNOLOGY PTE. LTD.</h1>
-            <p><b>公司概述：</b>
-                <br>ANGANG (ASIA-PACIFIC) TECHNOLOGY PTE. LTD. 是一家注册于新加坡的公司，成立于2021年。公司的使命是通过提供高质量的磨辊、磨床、低温合金设备以及钢铁厂常用的备件，支持亚太地区的钢铁公司。
-                <br><br><b>行业经验：</b>
-                <br>创始人之一王卫东自1997年进入钢铁行业，1997-2006年在韩国的POSCO工作，积累了丰富的经验，并在中国创立了多家公司。这些公司主要向鞍钢集团、沙钢集团、台湾烨联集团和烨辉集团等客户提供轧辊、磨床、低温合金设备、钢厂常用备件、磨辊间智能管理整合系统及改造服务。
-                <br><br><b>合作伙伴关系与代理权：</b>
-                <br>ANGANG (ASIA-PACIFIC) TECHNOLOGY PTE.有限公司拥有中国鞍钢集团、贵阳险峰公司、荷兰LISMAR公司和苏州烁日科技有限公司的设备代理权，长期目标是扩大服务范围，以满足钢铁行业不断变化的需求。
-            </p>
+    <!-- 主体内容 -->
+    <main>
+        <section class="partner-grid">
+            <a href="partners/angang">
+            <div class="partner">
+                <img src="partners/鞍钢.png" alt="鞍钢">
+                <h3>鞍钢轧辊有限公司</h3>
+                <p>中国第一家专门生产轧辊的企业，中国轧辊行业的领导者。</p>
+            </div>
+            </a>
+            <a href="partners/xianfeng">
+            <div class="partner">
+                <img src="partners/险峰.png" alt="险峰">
+                <h3>贵阳险峰机床有限责任公司</h3>
+                <p>中国最早研发制造轧辊磨床的企业，数控磨床远销海外30多个国家和地区。</p>
+            </div>
+            </a>
+            <a href="partners/lismar">
+            <div class="partner">
+                <img src="partners/LISMAR.png" alt="LISMAR">
+                <h3>LISMAR</h3>
+                <p>业务遍布全球，在全球多个客户现场安装了超过700套辊检验系统。</p>
+            </div>
+            </a>
+            <a href="partners/shuori">
+            <div class="partner">
+                <img src="partners/烁日.png" alt="烁日">
+                <h3>苏州烁日科技有限公司</h3>
+                <p>集研发、制造、销售为一体的特冶熔炼产品解决供应商。</p>
+            </div>
+            </a>
+            <a href="partners/dongli">
+            <div class="partner">
+                <img src="partners/东力.png" alt="东力">
+                <h3>张家港沙工东力机电设备制造有限公司</h3>
+                <p>主要从事机械备品备件加工、机械成套设备开发制作及安装等业务。</p>
+            </div>
+            </a>
+            <!-- 可以根据需要添加更多合作伙伴 -->
         </section>
+    </main>
 
-        <section class="link-section">
-            <a href="products.html">
-                <img src="images/products.jpg" alt="产品和服务">
-                <p>产品和服务</p>
-            </a>
-            <a href="partners.html">
-                <img src="images/partners.jpg" alt="合作伙伴">
-                <p>合作伙伴</p>
-            </a>
-            <a href="contact.html">
-                <img src="images/contact.jpg" alt="联系我们">
-                <p>联系我们</p>
-            </a>
-        </section>
-    </div>
-
-    <footer>
-        <p>版权所有 © 2024 ANGANG (ASIA-PACIFIC) TECHNOLOGY PTE. LTD.</p>
-    </footer>
+<footer>
+    <p>版权所有 &copy; 2024 ANGANG (ASIA-PACIFIC) TECHNOLOGY PTE. LTD.</p>
+</footer>
 
   <script>
     function switchLanguage(language) {
         if (language === 'cn') {
             // Logic to switch to Chinese version
             alert("切换到中文"); // Placeholder for actual implementation
-            window.location.href = "about.html"
+            window.location.href = "partners"
         } else if (language === 'en') {
             // Logic to switch to English version
             alert("Switching to English"); // Placeholder for actual implementation
-            window.location.href = "https://ivanyfwang1017.github.io/en-US/about.html"
+            window.location.href = "https://ivanyfwang1017.github.io/en-US/partners"
         }
     }
-  </script>
-	
+  </script>    
+
 </body>
 </html>
