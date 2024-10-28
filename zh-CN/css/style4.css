@@ -175,16 +175,21 @@ section.active {
   display: block; /* Show when active */
 }
 
-.inline-list {
+.flex-three {
+    display: flex;
+    flex-wrap: wrap; /* 允许换行 */
+    justify-content: space-between; /* 均匀分布 */
     padding: 0;
     margin: 0;
+    list-style: none;
 }
 
-.inline-list li {
-    display: inline-block;
-    margin: 0 10px; /* 设置左右间距 */
-    padding: 5px 10px;
+.flex-three li {
+    flex: 0 0 30%; /* 每个 <li> 占据容器的 30% */
+    margin-bottom: 20px; /* 下方间距 */
+    padding: 10px;
     border-radius: 5px;
+    text-align: center;
 }
         
 /* 图片样式 */
