@@ -171,6 +171,12 @@ main {
     margin-bottom: 5px;
     font-size: 1.2em;
     color: #2980b9;
+    height: 4em; /* 限制高度，使文字不超出 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* 限制为两行文本 */
+    -webkit-box-orient: vertical;
 }
 
 .partner p {
