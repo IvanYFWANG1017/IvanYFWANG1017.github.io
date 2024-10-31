@@ -198,9 +198,18 @@ main {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.partner:hover p {
-    height: auto; /* 悬停时显示完整内容 */
+.partner-description:hover::after {
+    content: attr(data-full-text); /* 显示完整文字 */
+    position: absolute;
+    background-color: #fff;
+    color: #333;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     white-space: normal;
+    z-index: 10;
+    max-width: 200px;
 }
 
 @media (max-width: 768px) {
