@@ -171,6 +171,7 @@ main {
     margin-bottom: 5px;
     font-size: 1.2em;
     color: #2980b9;
+    line-height: 1.5;
     height: 3em; /* 限制高度，使文字不超出 */
     overflow: hidden;
     text-overflow: ellipsis;
