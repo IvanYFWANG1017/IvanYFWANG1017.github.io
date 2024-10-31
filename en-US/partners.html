@@ -42,7 +42,9 @@
             <div class="partner">
                 <img src="partners/鞍钢.png" alt="鞍钢">
                 <h3>Ansteel Roll Co., Ltd.</h3>
-                <p>The first company in China that specializes in producing rolling mill rolls and a leader in China's rolling mill roll industry.</p>
+                <p class="partner-description" title="The first company in China that specializes in producing rolling mill rolls and a leader in China's rolling mill roll industry.">
+                    The first company in China that specializes in producing rolling mill rolls and a leader in China's rolling mill roll industry.
+                </p>
             </div>
             </a>
             <a href="partners/xianfeng">
@@ -93,6 +95,11 @@
             window.location.href = "partners"
         }
     }
+
+    // 将每个 p 元素内容自动设置为 title 属性值
+    document.querySelectorAll('.partner-description').forEach(item => {
+        item.setAttribute('title', item.textContent);
+    });
   </script>    
 
 </body>
