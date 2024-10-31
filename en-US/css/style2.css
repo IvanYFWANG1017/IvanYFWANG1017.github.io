@@ -177,6 +177,12 @@ main {
     font-size: 1em;
     color: #7f8c8d;
     line-height: 1.5;
+    height: 3em; /* 限制高度，使文字不超出 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* 限制为两行文本 */
+    -webkit-box-orient: vertical;
 }
 
 /* Hover效果 */
