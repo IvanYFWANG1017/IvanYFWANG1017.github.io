@@ -197,6 +197,16 @@ main {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
+.partner:hover h3 {
+    height: auto; /* 悬停时显示完整内容 */
+    white-space: normal;
+}
+
+.partner:hover p {
+    height: auto; /* 悬停时显示完整内容 */
+    white-space: normal;
+}
+
 @media (max-width: 768px) {
     .partner {
         width: calc(50% - 20px);
