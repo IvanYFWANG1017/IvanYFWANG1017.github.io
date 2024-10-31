@@ -100,6 +100,10 @@
     document.querySelectorAll('.partner-description').forEach(item => {
         item.setAttribute('title', item.textContent);
     });
+
+    document.querySelectorAll('.partner-description').forEach(item => {
+        item.setAttribute('data-full-text', item.textContent); // 保存完整文字
+    });
   </script>    
 
 </body>
