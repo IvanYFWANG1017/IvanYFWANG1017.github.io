@@ -171,7 +171,7 @@ main {
     margin-bottom: 5px;
     font-size: 1.2em;
     color: #2980b9;
-    height: 4em; /* 限制高度，使文字不超出 */
+    height: 3em; /* 限制高度，使文字不超出 */
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -195,11 +195,6 @@ main {
 .partner:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-.partner:hover h3 {
-    height: auto; /* 悬停时显示完整内容 */
-    white-space: normal;
 }
 
 .partner:hover p {
