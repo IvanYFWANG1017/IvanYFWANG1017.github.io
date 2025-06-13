@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANGANG (ASIA-PACIFIC) TECHNOLOGY PTE. LTD.</title>
+    <link rel="stylesheet" href="../css/style4.css">
+</head>
+<body>
+
+<header>
+    <h1>ANGANG (ASIA-PACIFIC) TECHNOLOGY PTE. LTD.</h1>
+    <div class="language-dropdown">
+        <a href="#">选择语言</a>
+        <div class="dropdown-content">
+            <a href="#" onclick="switchLanguage('cn')">中文</a>
+            <a href="#" onclick="switchLanguage('en')">English</a>
+        </div>
+    </div>
+</header>
+
+<nav>
+    <a href="https://ivanyfwang1017.github.io/zh-CN/index">首页</a>
+    <a href="https://ivanyfwang1017.github.io/zh-CN/products">产品与服务</a>
+    <div class="dropdown">
+        <a href="https://ivanyfwang1017.github.io/zh-CN/partners">合作伙伴</a>
+        <div class="dropdown-content">
+            <a href="angang">鞍钢轧辊有限公司</a>
+            <a href="ansteelheavy">鞍钢重型机械有限责任公司</a>
+            <a href="xianfeng">贵阳险峰机床有限责任公司</a>
+            <a href="lismar">LISMAR</a>
+            <a href="shuori">苏州烁日科技有限公司</a>
+            <a href="dongli">张家港沙工东力机电设备制造有限公司</a>
+        </div>
+    </div>
+    <a href="https://ivanyfwang1017.github.io/zh-CN/contact">联系我们</a>
+</nav>
+
+<div style="display: flex; flex-grow: 1;">
+    <aside>
+        <h2>导航</h2>
+        <a href="#" onclick="showSection('company-intro')">公司简介</a>
+        <a href="#" onclick="showSection('certificate')">授权书</a>
+    </aside>
+
+    <main>
+        <section id="company-intro" class="active">
+            <h2>鞍钢重型机械有限责任公司锻造轧辊生产能力与业绩综述</h2>
+            <br>鞍钢重机自2005年引进德国8000吨液压机以来，已逐步建成从原材料锭坯到成品轧辊的全流程自主生产体系。公司现拥有80 MN液压机及350 t行车，可锻造最大直径1 800 mm、单件重量达130 t的大型合金钢支承辊和热轧轧辊，充分满足高端轧机对轧辊规格与性能的严苛需求。
+            <br>
+            <br>在热处理环节，公司配备了多台大型节能燃气加热炉（规格涵盖4×16×4 m至3×6×3 m）、4台低温调质电炉、差温加热炉及喷淬机床，最大可处理净重60 t、直径1 600 mm、筒身长7 000 mm的大型支承辊。感应加热方面，拥有2.5×2.5×7 m、3.2×2.5×6 m、1.6×2.5×6 m等多种规格炉体，以及Φ1.8×2.7 m差温炉和Φ1.8×6 m卧式喷淬机，保证热处理的温度均匀性与效率。
+            <br>
+            <br>机加工设备方面，鞍钢重机配置了8 m、14 m、15 m重型卧式车床，重型数控车床、10 m车—磨一体数控机及数控轧辊磨床，实现从粗车、精车到磨削的一次性高精度加工。完整的工艺流程（锭坯→锻造→热处理→机加工→检测）确保每根轧辊的几何尺寸及力学性能均符合国家JB/T 4120‑2006《大型合金钢锻钢支承辊》标准，常用材质包括45Cr5NiMoV、50Cr5MoV、70Cr3NiMo等。
+            <br>
+            <br>自投产以来，年产能力达100–120根成品锻辊（直径φ1.0–φ1.8 m，长度≤2.4 m），制造周期4–5个月。产品广泛供应鞍钢热连轧、冷轧厂，并外销至攀枝花钢钒、广州联众、唐山燕山、江苏沙钢、包头钢铁等十余家国内重点钢厂。尤其自2010年起，成为攀钢2050 mm宽带轧线支承辊的独家供应商，连续多年运行稳定、反馈优异，充分彰显了鞍钢重机在高端轧辊领域的技术实力与可靠品质。
+            <br>
+            <br>凭借雄厚的设备实力、完善的质量保障体系和多年来的行业经验积累，鞍钢重机已跻身国内大型合金钢锻轧辊制造的领先行列。未来，公司将持续深化工艺优化与技术创新，不断提升生产效率与产品性能，为国内外轧机行业提供更加丰富、多元的高端轧辊解决方案。
+        </p>
+        </section>
+
+        <section id="certificate">
+            <h2>授权书</h2>
+            <div class="certificate-images">
+                <a href="鞍钢重型-合格经销商授权.pdf" download="鞍钢重型-合格经销商授权.pdf">
+                    <img src="鞍钢重型-合格经销商授权-中文.png" alt="授权书1">
+                </a>
+                <a href="鞍钢重型-合格经销商授权.pdf" download="Ansteel Heavy Machinery_Qualified Dealer Authorization.pdf">
+                    <img src="鞍钢重型-合格经销商授权-英文.png" alt="授权书2">
+                </a>
+            </div>
+        </section>
+        
+    </main>
+</div>
+<footer>
+    <p>版权所有 &copy; 2024 ANGANG (ASIA-PACIFIC) TECHNOLOGY PTE. LTD.</p>
+</footer>
+
+<script>
+// Function to show the selected section
+function showSection(sectionId) {
+    // Hide all sections
+    document.querySelectorAll('main section').forEach(section => {
+        section.style.display = 'none'; // Hide all sections
+        section.classList.remove('active');
+    });
+
+    // Show the selected section
+    const selectedSection = document.getElementById(sectionId);
+    if (selectedSection) {
+        selectedSection.style.display = 'block'; // Show only the clicked section
+        selectedSection.classList.add('active');
+        localStorage.setItem('activeSection', sectionId); // Store the active section in localStorage
+    }
+}
+
+// Function to initialize the active section based on localStorage or default to 'company-intro'
+function initActiveSection() {
+    const activeSection = localStorage.getItem('activeSection') || 'company-intro';
+    showSection(activeSection);
+}
+
+// Initialize the active section when the page loads
+document.addEventListener('DOMContentLoaded', initActiveSection);
+
+    function switchLanguage(language) {
+        if (language === 'cn') {
+            // Logic to switch to Chinese version
+            alert("切换到中文"); // Placeholder for actual implementation
+            window.location.href = "dongli"
+        } else if (language === 'en') {
+            // Logic to switch to English version
+            alert("Switching to English"); // Placeholder for actual implementation
+            window.location.href = "https://ivanyfwang1017.github.io/en-US/partners/dongli"
+        }
+    }
+
+</script>
+
+</body>
+</html>
+
+</body>
+</html>
